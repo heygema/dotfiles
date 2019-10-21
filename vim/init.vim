@@ -1,7 +1,7 @@
 " =========
 " Gema Anggada's NEOVIM SETUP 
 " =========
-" Wed Oct  9 18:01:20 2019
+" Mon Oct 21 15:13:00 2019
 
 " =========
 " NOTE: External Dependencies
@@ -279,6 +279,9 @@ autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx,*.html,*.css :PrettierAsync<cr>
 " =========
 " COC NVIM
 " =========
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+nmap <silent> gf :Format<cr>
 
 " Some servers have issues with backup files, see #649
 set nobackup
@@ -322,7 +325,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gf <Plug>(coc-format-selected)
+" format also
+" nmap <silent> gf <Plug>(coc-format-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
