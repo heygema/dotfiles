@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Read config files from repo
+REPO_ZSHRC=./zsh/.zshrc
+REPO_NVIMRC=$./vim/init.vim
+
+# update edited file in used to this repo
+cat $REPO_ZSHRC > $HOME/.zshrc
+cat $REPO_NVIMRC > $HOME/.config/nvim/init.vim
