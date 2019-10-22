@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "export": "./export",
-    "install": "./install"
+    "install": "./install",
+    "update-repo": "git add * && git commit -m \"update dotfiles\" && git push HEAD"
   },
   "keywords": [],
   "author": "",
