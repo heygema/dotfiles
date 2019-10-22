@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "export": "./export",
-    "install": "./install",
+    "import-settings": "./scripts/update",
+    "install": "./scripts/install",
     "update-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
   },
   "keywords": [],
