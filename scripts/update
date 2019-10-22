@@ -1,8 +1,10 @@
 #!/bin/sh
 
-VIMRC=$HOME/.config/nvim/init.vim
+VIMRC=$HOME/.vimrc
+NVIMRC=$HOME/.config/nvim/init.vim
 ZSHRC=$HOME/.zshrc
 
 # update edited file in used to this repo
+cat $VIMRC > ./vim/.vimrc
 cat $ZSHRC > ./zsh/.zshrc
-cat $VIMRC > ./vim/init.vim
+cat $NVIMRC > ./vim/init.vim
