@@ -1,4 +1,3 @@
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 set -o vi
@@ -82,7 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -109,13 +107,25 @@ source $ZSH/oh-my-zsh.sh
 # added by `npm i -g add-local-binaries-to-path`
 
 source ~/.zsh_dev_vars
+
+# ===========
 # PATH export
+# ===========
 export PATH="$PATH:./node_modules/.bin"
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='nvim'
+
+# ===========
+# GOPATH 
+# ===========
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+export GOPATH="$HOME/gocode"
+
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
