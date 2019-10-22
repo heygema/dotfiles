@@ -1,3 +1,4 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 set -o vi
@@ -114,7 +115,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export EDITOR='vim'
+export EDITOR='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -142,12 +143,17 @@ function rub() {
     mv $1 ~/.Trash
 }
 
+
+# FOR PRE-RELEASE NVIM
+# alias v='~/.nvim-pre/bin/nvim'
+# alias vf='v -o `fzf`'
+alias v='nvim'
+alias vf='nvim -o `fzf`'
+
 bindkey -v
 alias nv='nvim'
-alias v='~/.nvim-pre/bin/nvim'
-alias vf='v -o `fzf`'
 alias nvimf='nvim -o `fzf`'
-alias vno='~/.nvim-pre/bin/nvim -u ~/.config/nvim/empty.vim'
+alias vno='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
 
 function zle-line-init zle-keymap-select {
@@ -162,4 +168,3 @@ zle -N zle-keymap-select
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-
