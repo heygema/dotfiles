@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "import-settings": "./scripts/update",
-    "install": "./scripts/install",
+    "import": "./scripts/update",
+    "spread": "./scripts/install",
+    "gain-access": "sudo chmod u+x scripts/",
     "update-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
   },
   "keywords": [],
