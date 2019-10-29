@@ -1,10 +1,8 @@
 #!/bin/sh
+current_dir="$(dirname "$0")"
+source "$current_dir/data.sh"
 
-VIMRC=$HOME/.vimrc
-NVIMRC=$HOME/.config/nvim/init.vim
-ZSHRC=$HOME/.zshrc
-
-# update edited file in used to this repo
-cat $VIMRC > ./vim/.vimrc
-cat $ZSHRC > ./zsh/.zshrc
-cat $NVIMRC > ./vim/init.vim
+for (( i = 0; i < ${#files[@]}; ++i )); do
+    cat "${files[i]}" > "${repo_files[i]}"
+    echo "${files[i]} to ${repo_files[i]}"
+done

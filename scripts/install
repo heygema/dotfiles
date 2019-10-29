@@ -1,12 +1,11 @@
 #!/bin/sh
+current_dir="$(dirname "$0")"
+source "$current_dir/data.sh"
 
 # Read config files from repo
-REPO_ZSHRC=./zsh/.zshrc
-REPO_NVIMRC=$./vim/init.vim
-REPO_VIMRC=./vim/.vimrc
-
-# update edited file in used to this repo
-cat $REPO_ZSHRC > $HOME/.zshrc
-cat $REPO_NVIMRC > $HOME/.config/nvim/init.vim
-cat $REPO_VIMRC > $HOME/.vimrc
-
+files=("$HOME/.vimrc" "$HOME/.config/nvim/init.vim" "$HOME/.zshrc")
+repo_files=("./vim/.vimrc" "./vim/init.vim" "./zsh/.zshrc" )
+for (( i = 0; i < ${#files[@]}; ++i )); do
+    cat "${repo_files[i]}" > "${files[i]}"
+    echo "${repo_files[i]} to ${files[i]}"
+done
