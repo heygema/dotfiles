@@ -114,6 +114,8 @@ source ~/.zsh_dev_vars
 export PATH="$PATH:./node_modules/.bin"
 export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/Me/.dotnet/tools"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='nvim'
@@ -149,7 +151,7 @@ function killpid() {
     kill -9 $1
 }
 
-function rub() {
+function rubbish() {
     mv $1 ~/.Trash
 }
 

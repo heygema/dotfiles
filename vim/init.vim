@@ -60,6 +60,7 @@ Plug 'chmanie/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'liuchengxu/vim-clap'
 
 " for neovim
 if has('nvim')
