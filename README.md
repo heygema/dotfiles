@@ -3,10 +3,10 @@
 
 __Import current machine dotfiles settings__
 ```
-yarn import-settings
+yarn import
 ```
 
 __Distribute dotfiles in repo__
 ```
-yarn install
+yarn spread
 ```
