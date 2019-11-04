@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "import": "./scripts/update",
+    "update": "./scripts/update",
     "spread": "./scripts/install",
     "gain-access": "sudo chmod u+x scripts/",
-    "update-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
+    "update-remote-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
   },
   "keywords": [],
   "author": "",
