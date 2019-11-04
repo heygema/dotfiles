@@ -8,6 +8,7 @@
     "update": "./scripts/update",
     "spread": "./scripts/install",
     "gain-access": "sudo chmod u+x scripts/",
+    "make-commit-message": "touch commit-message.txt",
     "update-remote-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
   },
   "keywords": [],
