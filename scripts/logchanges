@@ -1,0 +1,4 @@
+#!/bin/sh
+
+git_s=$(git s)
+echo "---CHANGES:---\n $git_s" >> commit-message.txt

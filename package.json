@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "./scripts/update",
     "spread": "./scripts/install",
+    "logchanges": "./scripts/logchanges",
     "gain-access": "sudo chmod u+x scripts/",
-    "make-commit-message": "touch commit-message.txt",
-    "update-remote-repo": "git add * && git commit -m \"update dotfiles\" && git push origin HEAD"
+    "clean-commit-message": "rm -rf commit-message.txt", 
+    "make-commit-message": "touch commit-message.txt && npm run logchanges",
+    "update-remote-repo": " npm run clean-commit-message && npm run make-commit-message && git add * && git commit -F commit-message.txt && git push origin HEAD"
   },
   "keywords": [],
   "author": "",
