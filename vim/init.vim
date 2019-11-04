@@ -1,7 +1,7 @@
 " =========
 " Gema Anggada's NEOVIM SETUP 
 " =========
-" Mon Oct 21 15:13:00 2019
+" Mon Nov  4 11:33:33 2019
 
 " =========
 " NOTE: External Dependencies
@@ -61,6 +61,8 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'liuchengxu/vim-clap'
+Plug 'rhysd/git-messenger.vim'
+Plug 'rhysd/conflict-marker.vim'
 
 " for neovim
 if has('nvim')
@@ -235,6 +237,24 @@ let g:NERDTreeWinPos="left"
 let g:NERDTreeDirArrows=0
 map <Leader>t :NERDTreeToggle<CR>
 " let g:NERDTreeWinPos = "right"
+
+" =========
+" Conflict Marker
+" =========
+
+" disable the default highlight group
+" let g:conflict_marker_enable_mappings = 0
+let g:conflict_marker_highlight_group = ''
+
+" Include text after begin and end markers
+let g:conflict_marker_begin = '^<<<<<<< .*$'
+let g:conflict_marker_end   = '^>>>>>>> .*$'
+
+highlight ConflictMarkerBegin guibg=#2f7366
+highlight ConflictMarkerOurs guibg=#2e5049
+highlight ConflictMarkerTheirs guibg=#344f69
+highlight ConflictMarkerEnd guibg=#2f628e
+
 
 " =======
 " RUST.VIM

@@ -11,7 +11,7 @@
     "gain-access": "sudo chmod u+x scripts/",
     "clean-commit-message": "rm -rf commit-message.txt", 
     "make-commit-message": "touch commit-message.txt && npm run logchanges",
-    "update-remote-repo": " npm run clean-commit-message && npm run make-commit-message && git add * && git commit -F commit-message.txt && git push origin HEAD"
+    "update-remote-repo": " npm run clean-commit-message && npm run make-commit-message && git add . && git commit -F commit-message.txt && git push origin HEAD"
   },
   "keywords": [],
   "author": "",
