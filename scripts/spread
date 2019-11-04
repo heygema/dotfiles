@@ -1,0 +1,9 @@
+#!/bin/sh
+current_dir="$(dirname "$0")"
+source "$current_dir/data.sh"
+
+# Read config files from repo
+for (( i = 0; i < ${#files[@]}; ++i )); do
+    cat "${repo_files[i]}" > "${files[i]}"
+    echo "${repo_files[i]} to ${files[i]}"
+done

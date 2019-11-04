@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "./scripts/update",
-    "spread": "./scripts/install",
+    "spread": "./scripts/spread",
     "logchanges": "./scripts/logchanges",
     "gain-access": "sudo chmod u+x scripts/",
     "clean-commit-message": "rm -rf commit-message.txt", 
