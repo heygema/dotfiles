@@ -180,3 +180,7 @@ zle -N zle-keymap-select
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/Me/.sdkman"
+[[ -s "/Users/Me/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Me/.sdkman/bin/sdkman-init.sh"
