@@ -1,11 +1,11 @@
 " =========
 " Gema Anggada's NEOVIM SETUP 
 " =========
-" Mon Nov  4 11:33:33 2019
+" Fri Nov  8 10:07:20 2019
 
 " =========
 " NOTE: External Dependencies
-" Ack, fd, VimPlug
+" fd, ripgrep, fzf, VimPlug
 " =========
 
 set nocompatible              " be iMproved, required
@@ -23,12 +23,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-" Plug 'chriskempson/base16-vim'
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'joshdick/onedark.vim'
-" Plug 'arcticicestudio/nord-vim'
 
 "syntaxes
 Plug 'leafgarland/typescript-vim'
@@ -40,29 +34,31 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 
 " tools
-Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/denite.nvim'
 Plug 'reasonml-editor/vim-reason-plus'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'wakatime/vim-wakatime'
 Plug 'mattn/emmet-vim'
-Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-sleuth'
 " fzf just for relative path
 Plug '/usr/local/opt/fzf'
 Plug 'chmanie/fzf.vim'
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'liuchengxu/vim-clap'
-Plug 'rhysd/git-messenger.vim'
 Plug 'rhysd/conflict-marker.vim'
+
+" Questionable plugin
+" Plug 'mileszs/ack.vim'
+" Plug 'rbgrouleff/bclose.vim'
+" Plug 'rhysd/git-messenger.vim'
+" Plug 'qpkorr/vim-bufkill'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'Shougo/denite.nvim'
 
 " for neovim
 if has('nvim')
@@ -71,7 +67,7 @@ endif
 
 call plug#end()
 
-filetype plugin indent on    " required
+filetype plugin indent on
 
 " =========
 " GENERAL SETTINGS
@@ -155,7 +151,6 @@ set encoding=UTF-8
 " when indenting with '>', use 4 spaces width
 " set shiftwidth=2
 
-set guifont=Hack\ Nerd\ Font\ Regular\ 14
 set mouse=c
 set foldenable
 set backspace=2
@@ -287,11 +282,6 @@ let g:jsx_ext_required = 0
 let g:AutoPairsShortcutToggle = ''
 
 " =========
-" Emmet-Vim
-" =========
-" let g:user_emmet_leader_key='<C-m>'
-
-" =========
 " Prettier
 " =========
 
@@ -367,14 +357,12 @@ nnoremap <silent> gh :call <SID>show_documentation()<CR>
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " =========
 " AIRLINE
 " =========
 
-" if you want to disable auto detect, comment out those two lines
-"let g:airline#extensions#disable_rtp_load = 1
+" let g:airline#extensions#disable_rtp_load = 1
 
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
@@ -399,13 +387,6 @@ let g:python_host_prog = "/usr/local/bin/python"
 let $FZF_DEFAULT_COMMAND='fd --type f'
 inoremap <expr> <C-l> fzf#vim#complete#path_relative('fd')
 nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
-
-" =========
-" ACK
-" =========
-
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
 
 " =========
 " NERDCOMMENTER
@@ -445,6 +426,7 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 " light-grey
 hi tsxTypeBraces guifg=#999999
+
 " dark-grey
 hi tsxTypes guifg=#666666
 
@@ -465,13 +447,18 @@ hi tsxEqual guifg=#F99575
 hi tsxAttrib guifg=#F8BD7F cterm=italic
 " --- GRUVBOX --- use this with gruvbox theme
 
-" blue
-" hi tsxTagName guifg=#71A6DC
-" hi tsxCloseString guifg=#71A6DC
-
 hi ReactState guifg=#C176A7
 hi ReactProps guifg=#D19A66
 hi Events ctermfg=204 guifg=#56B6C2
 hi ReduxKeywords ctermfg=204 guifg=#C678DD
 hi WebBrowser ctermfg=204 guifg=#56B6C2
 hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
+
+" =========
+" VIM-CLAP
+" =========
+
+" Configure to use grep
+map <silent> <Leader>x :Clap grep<cr>
+" map <silent> <Leader>xf :Clap files<cr>
+
