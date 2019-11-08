@@ -51,10 +51,11 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'liuchengxu/vim-clap'
 Plug 'rhysd/conflict-marker.vim'
+" NOTE: bclose to fix ranger-vim not being closed after used
+Plug 'rbgrouleff/bclose.vim'
 
 " Questionable plugin
 " Plug 'mileszs/ack.vim'
-" Plug 'rbgrouleff/bclose.vim'
 " Plug 'rhysd/git-messenger.vim'
 " Plug 'qpkorr/vim-bufkill'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
