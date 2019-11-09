@@ -8,8 +8,29 @@
 " fd, ripgrep, fzf, VimPlug
 " =========
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" =========
+" Custom Key mapping DOCUMENTATION
+" =========
+" <Leader>k -> clear highlighted search result
+" <Leader>g -> grep via vim-clap
+" <Leader>t -> NERDTree
+" <Leader>l -> fuzzy finder with fzf and fd
+" <Leader>q -> to go to next git conflict
+" <Leader>f -> open ranger vim (in ranger,<c-h> to show dotfiles, @ to enter execute shell command)
+" gj, gk -> navigate between buffers <left, right>
+" gq -> close current buffer and move to previous one
+" =========
+
+" =========
+" Useful Plugin Key mapping DOCUMENTATION
+" =========
+" [x and ]x -> to navigate between conflict from conflict marker 
+"
+" =========
+
+" First and Foremost
+set nocompatible
+filetype off
 
 " =========
 " PLUGINS
@@ -74,31 +95,20 @@ filetype plugin indent on
 " GENERAL SETTINGS
 " =========
 
-" THEMES
-
+" THEMING
 syntax enable
-
-" Cursor
 set cursorline
-
 set hlsearch
 set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
 set ignorecase          " ignore case when searching
 set smartcase " no ignorecase if Uppercase char present
 set autoread " autoread file
-
-" set background=light
 let g:gruvbox_contrast_light="medium"
 set background=dark    " Setting dark mode
-" let g:gruvbox_termcolors=256
 let g:gruvbox_contrast_dark="medium"
 let g:gruvbox_italic=1
-" let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme gruvbox
-
-" custom commands
-" command W w !sudo tee % 
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nmap <space> za
@@ -460,6 +470,5 @@ hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
 " =========
 
 " Configure to use grep
-map <silent> <Leader>x :Clap grep<cr>
+map <silent> <Leader>g :Clap grep<cr>
 " map <silent> <Leader>xf :Clap files<cr>
-
