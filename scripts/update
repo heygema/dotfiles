@@ -4,5 +4,5 @@ source "$current_dir/data.sh"
 
 for (( i = 0; i < ${#files[@]}; ++i )); do
     cat "${files[i]}" > "${repo_files[i]}"
-    echo "${files[i]} to ${repo_files[i]}"
+    echo "Writes ${files[i]} to ${repo_files[i]}"
 done
