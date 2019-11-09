@@ -10,10 +10,33 @@ function dotfiles_destroyer() {
  done
 }
 
+function really_sure() {
+ read -p "Like, really sure? [Y/n] " yn
+ case $yn in
+     [Yy]) echo "Okay then!"; dotfiles_destroyer; break;;
+     [Nn]) exit;;
+     *) echo "Only YES or NO!"; really_sure;;
+ esac
+}
 
-read -p "Do you wish override the machines dotfiles?" yn
-case $yn in
-    [Yy]* ) make install; break;;
-    [Nn]* ) exit;;
-esac
+function sure() {
+ read -p "Are you sure? [Y/n] " yn
+ case $yn in
+     [Yy]) really_sure; break;;
+     [Nn]) exit;;
+     *) echo "Only YES or NO!"; sure;;
+ esac
+}
+
+function main() {
+ read -p "Do you wish override the machine's dotfiles? [Y/n] " yn
+ case $yn in
+     [Yy]) sure; break;;
+     [Nn]) exit;;
+     *) echo "Only YES or NO!"; main;;
+ esac
+}
+
+main
+
 
