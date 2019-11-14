@@ -131,11 +131,11 @@ export GOPATH="$HOME/gocode"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function gt() {
+function gopro() {
     cd $HOME/projects/$1
 }
 
-function gta() {
+function goA() {
     cd $HOME/A/$1
 }
 
@@ -155,17 +155,17 @@ function rubbish() {
     mv $1 ~/.Trash
 }
 
-
 # FOR PRE-RELEASE NVIM
 # alias v='~/.nvim-pre/bin/nvim'
 # alias vf='v -o `fzf`'
+
 alias v='nvim'
 alias vf='nvim -o `fzf`'
 
 bindkey -v
 alias nv='nvim'
 alias nvimf='nvim -o `fzf`'
-alias vno='nvim -u ~/.config/nvim/empty.vim'
+alias nvpure='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
 
 function zle-line-init zle-keymap-select {

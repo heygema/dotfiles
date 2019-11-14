@@ -76,9 +76,8 @@ Plug 'rhysd/conflict-marker.vim'
 Plug 'rbgrouleff/bclose.vim'
 
 " Questionable plugin
-" Plug 'mileszs/ack.vim'
 " Plug 'rhysd/git-messenger.vim'
-" Plug 'qpkorr/vim-bufkill'
+Plug 'qpkorr/vim-bufkill'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'Shougo/denite.nvim'
 

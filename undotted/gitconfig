@@ -2,7 +2,6 @@
 	email = gem.anggada@gmail.com
 	name = Gema
 [alias]
-    rebased = git add . && git rebase --continue
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     s = status -s
     pure = pull upstream master --rebase
