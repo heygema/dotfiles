@@ -8,6 +8,8 @@ files=(
 "$HOME/.config/nvim/coc-settings.json"
 "$HOME/.zshrc"
 "$HOME/.gitconfig"
+"$HOME/.config/kitty/kitty.conf"
+"$HOME/.config/kitty/Batman.conf"
 )
 repo_files=(
 "$UNDOTTED/vimrc"
@@ -15,4 +17,6 @@ repo_files=(
 "$UNDOTTED/coc-settings.json"
 "$UNDOTTED/zshrc"
 "$UNDOTTED/gitconfig"
+"$UNDOTTED/kitty.conf"
+"$UNDOTTED/Batman.conf"
 )
