@@ -4,6 +4,7 @@ set -o vi
 bindkey -v
 export KEYTIMEOUT=1
 
+# turn off tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # Path to your oh-my-zsh installation.
@@ -135,7 +136,7 @@ function gopro() {
     cd $HOME/projects/$1
 }
 
-function goA() {
+function gotoa() {
     cd $HOME/A/$1
 }
 
@@ -184,3 +185,10 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/Me/.sdkman"
 [[ -s "/Users/Me/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Me/.sdkman/bin/sdkman-init.sh"
+
+# KITTY
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+

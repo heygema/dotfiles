@@ -55,6 +55,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 
 " tools
+Plug 'rhysd/git-messenger.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
@@ -74,10 +75,9 @@ Plug 'liuchengxu/vim-clap'
 Plug 'rhysd/conflict-marker.vim'
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
+Plug 'qpkorr/vim-bufkill'
 
 " Questionable plugin
-" Plug 'rhysd/git-messenger.vim'
-Plug 'qpkorr/vim-bufkill'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'Shougo/denite.nvim'
 
@@ -249,16 +249,16 @@ map <Leader>t :NERDTreeToggle<CR>
 
 " disable the default highlight group
 " let g:conflict_marker_enable_mappings = 0
-let g:conflict_marker_highlight_group = ''
+" let g:conflict_marker_highlight_group = ''
 
 " Include text after begin and end markers
-let g:conflict_marker_begin = '^<<<<<<< .*$'
-let g:conflict_marker_end   = '^>>>>>>> .*$'
+" let g:conflict_marker_begin = '^<<<<<<< .*$'
+" let g:conflict_marker_end   = '^>>>>>>> .*$'
 
-highlight ConflictMarkerBegin guibg=#2f7366
-highlight ConflictMarkerOurs guibg=#2e5049
-highlight ConflictMarkerTheirs guibg=#344f69
-highlight ConflictMarkerEnd guibg=#2f628e
+" highlight ConflictMarkerBegin guibg=#2f7366
+" highlight ConflictMarkerOurs guibg=#2e5049
+" highlight ConflictMarkerTheirs guibg=#344f69
+" highlight ConflictMarkerEnd guibg=#2f628e
 
 
 " =======
@@ -471,3 +471,10 @@ hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
 " Configure to use grep
 map <silent> <Leader>g :Clap grep<cr>
 " map <silent> <Leader>xf :Clap files<cr>
+
+
+" =========
+" VIM-CLAP
+" =========
+let g:git_messenger_no_default_mappings="true"
+nmap <C-w>m <Plug>(git-messenger)
