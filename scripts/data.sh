@@ -10,6 +10,7 @@ files=(
 "$HOME/.gitconfig"
 "$HOME/.config/kitty/kitty.conf"
 "$HOME/.config/kitty/Batman.conf"
+"$HOME/.config/alacritty/alacritty.yml"
 )
 repo_files=(
 "$UNDOTTED/vimrc"
@@ -19,4 +20,5 @@ repo_files=(
 "$UNDOTTED/gitconfig"
 "$UNDOTTED/kitty.conf"
 "$UNDOTTED/Batman.conf"
+"$UNDOTTED/alacritty.yml"
 )

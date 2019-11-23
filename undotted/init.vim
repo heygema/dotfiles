@@ -65,19 +65,19 @@ Plug 'tpope/vim-surround'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'wakatime/vim-wakatime'
 Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-sleuth'
 " fzf just for relative path
 Plug '/usr/local/opt/fzf'
 Plug 'chmanie/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'liuchengxu/vim-clap'
-Plug 'rhysd/conflict-marker.vim'
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
 Plug 'qpkorr/vim-bufkill'
 
 " Questionable plugin
+" Plug 'tpope/vim-sleuth'
+" Plug 'rhysd/conflict-marker.vim'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'Shougo/denite.nvim'
 
@@ -114,6 +114,7 @@ nmap <space> za
 command! W w
 command! Q q
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+command Bfno echo bufnr('%')
 
 " Map to resize split panes
 map <silent> ˙ <C-w><
@@ -154,12 +155,12 @@ nmap <leader>bl :ls<CR>
 set encoding=UTF-8
 
 " disabled because of sleuth
-" set autoindent
-" set smartindent
+set autoindent
+set smartindent
 " show existing tab with 4 spaces width
-" set tabstop=2
+set tabstop=2
 " when indenting with '>', use 4 spaces width
-" set shiftwidth=2
+set shiftwidth=2
 
 set mouse=c
 set foldenable
