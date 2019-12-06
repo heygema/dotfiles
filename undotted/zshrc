@@ -153,8 +153,16 @@ function killpid() {
 }
 
 function rubbish() {
-    mv $1 ~/.Trash
+    find . -name "$1" -maxdepth 1 -exec mv {} ~/.Trash \;
 }
+
+function touch-safe {
+    for f in "$@"; do
+      [ -d $f:h ] || mkdir -p $f:h && command touch $f
+    done
+}
+
+alias touch=touch-safe
 
 # FOR PRE-RELEASE NVIM
 # alias v='~/.nvim-pre/bin/nvim'
@@ -169,6 +177,8 @@ alias nvimf='nvim -o `fzf`'
 alias nvpure='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
 alias ngrok='~/ngrok'
+
+alias purge_node_modules='find . -name "node_modules" -type d  -prune -exec rm -rf "{}" \;'
 
 function zle-line-init zle-keymap-select {
     RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
@@ -188,8 +198,8 @@ export SDKMAN_DIR="/Users/Me/.sdkman"
 [[ -s "/Users/Me/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Me/.sdkman/bin/sdkman-init.sh"
 
 # KITTY
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 # Completion for kitty
 # kitty + complete setup zsh | source /dev/stdin
 
