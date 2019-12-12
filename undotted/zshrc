@@ -177,6 +177,7 @@ alias nvimf='nvim -o `fzf`'
 alias nvpure='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
 alias ngrok='~/ngrok'
+alias lst='ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]*\//--/g'"'"' -e '"'"'s/^/   /'"'"' -e '"'"'s/-/|/'"'"
 
 alias purge_node_modules='find . -name "node_modules" -type d  -prune -exec rm -rf "{}" \;'
 

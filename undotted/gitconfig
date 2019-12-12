@@ -10,6 +10,8 @@
     recon = rebase --continue
     rebort = rebase --abort
     reskip = rebase --skip
+    cabang = symbolic-ref --short HEAD
+    monyet = diff upstream/master HEAD
 [filter "lfs"]
         required = true
         clean = git-lfs clean -- %f
