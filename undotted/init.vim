@@ -470,7 +470,7 @@ hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
 " =========
 
 " Configure to use grep
-map <silent> <Leader>g :Clap grep<cr>
+map <silent> <Leader>g :Clap grep .<cr>
 " map <silent> <Leader>xf :Clap files<cr>
 
 
