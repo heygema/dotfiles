@@ -450,12 +450,16 @@ hi tsxTypes guifg=#666666
 " --- NORD --- use this with nord theme
 
 " --- GRUVBOX --- use this with gruvbox theme
-hi tsxTagName guifg=#E06C75
-hi tsxCloseString guifg=#E06C75
+
+" hi tsxTagName guifg=#E06C75
+" hi tsxCloseString guifg=#E06C75
+
 " hi tsxCloseTag guifg=#F99575
+
 hi tsxAttributeBraces guifg=#F99575
 hi tsxEqual guifg=#F99575
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+
 " --- GRUVBOX --- use this with gruvbox theme
 
 hi ReactState guifg=#C176A7

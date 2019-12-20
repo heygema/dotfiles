@@ -187,6 +187,12 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+# for tmux change pane name
+function settitle() {
+      export PS1="\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ "
+      echo -ne "\e]0;$1\a"
+}
+
 zle -N zle-line-init
 zle -N zle-keymap-select
 
