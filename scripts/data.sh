@@ -11,6 +11,7 @@ files=(
 "$HOME/.config/kitty/kitty.conf"
 "$HOME/.config/kitty/Batman.conf"
 "$HOME/.config/alacritty/alacritty.yml"
+"$HOME/.tmux.conf.local"
 )
 repo_files=(
 "$UNDOTTED/vimrc"
@@ -21,4 +22,5 @@ repo_files=(
 "$UNDOTTED/kitty.conf"
 "$UNDOTTED/Batman.conf"
 "$UNDOTTED/alacritty.yml"
+"$UNDOTTED/tmux.conf.local"
 )
