@@ -74,6 +74,7 @@ Plug 'liuchengxu/vim-clap'
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
 Plug 'qpkorr/vim-bufkill'
+Plug 'severin-lemaignan/vim-minimap'
 
 " Questionable plugin
 " Plug 'tpope/vim-sleuth'
@@ -296,7 +297,7 @@ let g:AutoPairsShortcutToggle = ''
 " Prettier
 " =========
 
-autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx,*.html,*.css :PrettierAsync<cr>
+autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx,*.html,*.css :Prettier<cr>
 
 " =========
 " COC NVIM
@@ -429,7 +430,7 @@ let g:NERDToggleCheckAllLines = 1
 
 
 " =========
-" VIM-TYPESCRIPT
+" TYPESCRIPT-VIM
 " =========
 
 " set filetypes as typescript.tsx for vim jsx typescript
