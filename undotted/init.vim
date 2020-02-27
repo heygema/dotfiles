@@ -70,7 +70,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'chmanie/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'liuchengxu/vim-clap'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
 Plug 'qpkorr/vim-bufkill'
@@ -115,7 +115,7 @@ nmap <space> za
 command! W w
 command! Q q
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-command Bfno echo bufnr('%')
+command! Bfno echo bufnr('%')
 
 " Map to resize split panes
 map <silent> ˙ <C-w><
@@ -297,7 +297,8 @@ let g:AutoPairsShortcutToggle = ''
 " Prettier
 " =========
 
-autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx,*.html,*.css :Prettier<cr>
+" disable for marking
+" autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx,*.html,*.css :Prettier<cr>
 
 " =========
 " COC NVIM
@@ -437,10 +438,10 @@ let g:NERDToggleCheckAllLines = 1
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 " light-grey
-hi tsxTypeBraces guifg=#999999
+" hi tsxTypeBraces guifg=#999999
 
 " dark-grey
-hi tsxTypes guifg=#666666
+" hi tsxTypes guifg=#666666
 
 " --- NORD --- use this with nord theme
 " hi tsxTagName guifg=#86bbcc
@@ -452,11 +453,10 @@ hi tsxTypes guifg=#666666
 
 " --- GRUVBOX --- use this with gruvbox theme
 
-" hi tsxTagName guifg=#E06C75
-" hi tsxCloseString guifg=#E06C75
-
-" hi tsxCloseTag guifg=#F99575
-
+" tagName
+hi tsxTagName guifg=#E06C75
+hi tsxCloseTagName guifg=#E06C75
+hi tsxCloseTag guifg=#F99575
 hi tsxAttributeBraces guifg=#F99575
 hi tsxEqual guifg=#F99575
 hi tsxAttrib guifg=#F8BD7F cterm=italic

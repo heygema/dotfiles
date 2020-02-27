@@ -5,7 +5,7 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # turn off tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 # Path to your oh-my-zsh installation.
 # source ~/.zsh-powerline.sh
