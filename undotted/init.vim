@@ -84,7 +84,7 @@ Plug 'severin-lemaignan/vim-minimap'
 
 " for neovim
 if has('nvim')
-  let g:python3_host_prog = "/absolute/path/to/python3"
+  let g:python3_host_prog =  "/usr/local/bin/python3"
 endif
 
 call plug#end()
