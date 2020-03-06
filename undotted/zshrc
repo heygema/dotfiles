@@ -210,3 +210,4 @@ export SDKMAN_DIR="/Users/Me/.sdkman"
 # Completion for kitty
 # kitty + complete setup zsh | source /dev/stdin
 
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
