@@ -204,6 +204,13 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export SDKMAN_DIR="/Users/Me/.sdkman"
 [[ -s "/Users/Me/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Me/.sdkman/bin/sdkman-init.sh"
 
+# NVM CONFIG
+# -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+alias load_nvm="[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" --no-use"
+# export NVM_DIR=${HOME}/.nvm
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 # KITTY
 # autoload -Uz compinit
 # compinit
