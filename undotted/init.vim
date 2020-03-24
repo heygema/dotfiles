@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
 
 "syntaxes
 Plug 'leafgarland/typescript-vim'
@@ -108,7 +109,8 @@ let g:gruvbox_contrast_light="medium"
 set background=dark    " Setting dark mode
 let g:gruvbox_contrast_dark="medium"
 let g:gruvbox_italic=1
-colorscheme gruvbox
+" let g:molokai_original = 1
+colorscheme molokai
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nmap <space> za
