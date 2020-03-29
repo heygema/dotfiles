@@ -128,8 +128,6 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export GOPATH="$HOME/gocode"
 
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function gopro() {
