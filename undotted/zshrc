@@ -130,7 +130,7 @@ export GOPATH="$HOME/gocode"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function gopro() {
+function workon() {
     cd $HOME/projects/$1
 }
 
