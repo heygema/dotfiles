@@ -114,6 +114,7 @@ source ~/.zsh_dev_vars
 # ===========
 export PATH="$PATH:./node_modules/.bin"
 export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
 # Add .NET Core SDK tools
 export PATH="$PATH:/Users/Me/.dotnet/tools"
