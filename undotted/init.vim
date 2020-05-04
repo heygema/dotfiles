@@ -105,12 +105,12 @@ set showmatch           " jump to matches when entering regexp
 set ignorecase          " ignore case when searching
 set smartcase " no ignorecase if Uppercase char present
 set autoread " autoread file
-let g:gruvbox_contrast_light="medium"
+" let g:gruvbox_contrast_light="medium"
 set background=dark    " Setting dark mode
 let g:gruvbox_contrast_dark="medium"
 let g:gruvbox_italic=1
 " let g:molokai_original = 1
-colorscheme molokai
+colorscheme gruvbox
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nmap <space> za
