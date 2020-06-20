@@ -40,11 +40,11 @@ call plug#begin('~/.nvim/bundle')
 
 " appearances
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 
 "syntaxes
 Plug 'leafgarland/typescript-vim'
@@ -54,6 +54,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'purescript-contrib/purescript-vim'
 
 " tools
 Plug 'rhysd/git-messenger.vim'
@@ -74,8 +75,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
-Plug 'qpkorr/vim-bufkill'
-Plug 'severin-lemaignan/vim-minimap'
+" Plug 'qpkorr/vim-bufkill'
 
 " Questionable plugin
 " Plug 'tpope/vim-sleuth'

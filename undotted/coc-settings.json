@@ -24,7 +24,7 @@
     },
     "reason": {
       "command": "~/Documents/LanguageServer/reason-language-server",
-      "filetypes": ["reason"]
+      "filetypes": ["reason", "ocaml"]
     },
     "rust": {
       "command": "rls",

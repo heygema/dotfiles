@@ -118,6 +118,7 @@ export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
 # Add .NET Core SDK tools
 export PATH="$PATH:/Users/Me/.dotnet/tools"
+eval $(opam env)
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='nvim'
@@ -173,6 +174,7 @@ alias vf='nvim -o `fzf`'
 bindkey -v
 alias nv='nvim'
 alias nvimf='nvim -o `fzf`'
+alias cfd='cd $(dirname `fzf`)'
 alias nvpure='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
 alias ngrok='~/ngrok'
