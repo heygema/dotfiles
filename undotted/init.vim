@@ -47,6 +47,7 @@ Plug 'morhetz/gruvbox'
 " Plug 'tomasr/molokai'
 
 "syntaxes
+Plug 'udalov/kotlin-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'

@@ -29,6 +29,10 @@
     "rust": {
       "command": "rls",
       "filetypes": ["rust"]
+    },
+    "kotlin": {
+      "command": "~/Documents/LanguageServer/kotlin-language-server/server/build/scripts/server",
+      "filetypes": ["kotlin"]
     }
   }
 }
