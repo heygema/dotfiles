@@ -8,7 +8,16 @@
 " Ack, fd, VimPlug
 " =========
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+call plug#end()
+
 set nocompatible
+set nocp                    " 'compatible' is not set
+filetype plugin on          " plugins are enabled
 filetype off 
 syntax enable
 " set cursorline
@@ -132,3 +141,7 @@ set nobackup
 set nowritebackup
 set updatetime=300
 set background=dark    " Setting dark mode
+
+if filereadable($HOME."/.coc-vimrc")
+    source ${HOME}/.vim/.coc-vimrc
+endif
