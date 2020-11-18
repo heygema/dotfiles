@@ -246,7 +246,7 @@ let NERDTreeShowHidden=1
 let g:NERDTreeWinPos="left"
 let g:NERDTreeDirArrows=0
 map <Leader>t :NERDTreeToggle<CR>
-" let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "right"
 
 " =========
 " Conflict Marker
