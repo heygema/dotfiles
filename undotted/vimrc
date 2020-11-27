@@ -55,6 +55,7 @@ syntax enable
 " THEMING
 set cursorline
 colorscheme gruvbox
+" colorscheme peaksea
 
 " =========
 " GENERAL SETTINGS
