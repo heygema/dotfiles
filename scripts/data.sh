@@ -4,6 +4,7 @@ UNDOTTED="./undotted"
 
 files=(
 "$HOME/.vimrc"
+"$HOME/.vimextend.vim"
 "$HOME/.config/nvim/init.vim"
 "$HOME/.config/nvim/coc-settings.json"
 "$HOME/.zshrc"
@@ -15,6 +16,7 @@ files=(
 )
 repo_files=(
 "$UNDOTTED/vimrc"
+"$UNDOTTED/vimextend.vim"
 "$UNDOTTED/init.vim"
 "$UNDOTTED/coc-settings.json"
 "$UNDOTTED/zshrc"
