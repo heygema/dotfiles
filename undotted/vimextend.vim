@@ -1,6 +1,7 @@
 " =========
 " AIRLINE
 " =========
+let g:prettier#config#trailing_comma = 'none'
 
 " let g:airline#extensions#disable_rtp_load = 1
 
