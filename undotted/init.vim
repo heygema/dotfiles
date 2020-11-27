@@ -44,18 +44,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
-" Plug 'tomasr/molokai'
 
 "syntaxes
-Plug 'udalov/kotlin-vim'
+" Plug 'udalov/kotlin-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'purescript-contrib/purescript-vim'
+" Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
 
 " tools
 Plug 'rhysd/git-messenger.vim'
@@ -457,21 +455,21 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 " --- GRUVBOX --- use this with gruvbox theme
 
 " tagName
-hi tsxTagName guifg=#E06C75
-hi tsxCloseTagName guifg=#E06C75
+" hi tsxTagName guifg=#E06C75
+" hi tsxCloseTagName guifg=#E06C75
 " hi tsxCloseTag guifg=#F99575
-hi tsxAttributeBraces guifg=#F99575
-hi tsxEqual guifg=#F99575
-hi tsxAttrib guifg=#F8BD7F cterm=italic
+" hi tsxAttributeBraces guifg=#F99575
+" hi tsxEqual guifg=#F99575
+" hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 " --- GRUVBOX --- use this with gruvbox theme
 
-hi ReactState guifg=#C176A7
-hi ReactProps guifg=#D19A66
-hi Events ctermfg=204 guifg=#56B6C2
-hi ReduxKeywords ctermfg=204 guifg=#C678DD
-hi WebBrowser ctermfg=204 guifg=#56B6C2
-hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
+" hi ReactState guifg=#C176A7
+" hi ReactProps guifg=#D19A66
+" hi Events ctermfg=204 guifg=#56B6C2
+" hi ReduxKeywords ctermfg=204 guifg=#C678DD
+" hi WebBrowser ctermfg=204 guifg=#56B6C2
+" hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
 
 " =========
 " VIM-CLAP
