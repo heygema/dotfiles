@@ -60,6 +60,7 @@ colorscheme gruvbox
 " GENERAL SETTINGS
 " =========
 
+" filetype plugin indent on
 set hlsearch
 set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
@@ -111,14 +112,14 @@ nmap <leader>bl :ls<CR>
 
 set encoding=UTF-8
 set autoindent
-set smartindent
+" set smartindent
 set mouse=c
 set foldenable
 set backspace=2
 " show existing tab with 4 spaces width
 " set tabstop=2
 " when indenting with '>', use 4 spaces width
-" set shiftwidth=2
+set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
 

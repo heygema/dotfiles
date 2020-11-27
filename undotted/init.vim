@@ -52,7 +52,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
-" Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 " Plug 'pangloss/vim-javascript'
 
 " tools

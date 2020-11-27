@@ -178,6 +178,7 @@ alias vf='nvim -o `fzf`'
 bindkey -v
 alias nv='nvim'
 alias nvimf='nvim -o `fzf`'
+alias vimf='vim -o `fzf`'
 alias cfd='cd $(dirname `fzf`)'
 alias nvpure='nvim -u ~/.config/nvim/empty.vim'
 alias lg='lazygit'
