@@ -136,6 +136,10 @@ function workon() {
     cd $HOME/projects/$1
 }
 
+function sidework() {
+    cd $HOME/1/sidework/$1
+}
+
 function gotoa() {
     cd $HOME/A/$1
 }
