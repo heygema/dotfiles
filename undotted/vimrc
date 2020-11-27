@@ -51,16 +51,9 @@ set nocp                    " 'compatible' is not set
 filetype plugin on          " plugins are enabled
 " filetype off 
 syntax enable
+
 " THEMING
-" THEMING
-syntax enable
 set cursorline
-set hlsearch
-set incsearch           " do incremental searching
-set showmatch           " jump to matches when entering regexp
-set ignorecase          " ignore case when searching
-set smartcase " no ignorecase if Uppercase char present
-set autoread " autoread file
 colorscheme gruvbox
 
 " =========

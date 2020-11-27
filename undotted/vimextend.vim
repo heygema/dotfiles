@@ -143,7 +143,7 @@ let g:NERDToggleCheckAllLines = 1
 " =========
 
 " set filetypes as typescript.tsx for vim jsx typescript
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+" autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 
 " =========
