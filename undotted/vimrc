@@ -10,18 +10,58 @@
 
 call plug#begin('~/.vim/plugged')
 
+" appearances
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'machakann/vim-highlightedyank'
+Plug 'morhetz/gruvbox'
 
+"syntaxes
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'jparise/vim-graphql'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'mxw/vim-jsx'
+
+" tools
+Plug 'rhysd/git-messenger.vim'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'wakatime/vim-wakatime'
+" fzf just for relative path
+Plug '/usr/local/opt/fzf'
+Plug 'chmanie/fzf.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+" NOTE: bclose to fix ranger-vim not being closed after used
+Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
+
+source ~/.vimextend.vim
 
 set nocompatible
 set nocp                    " 'compatible' is not set
 filetype plugin on          " plugins are enabled
-filetype off 
+" filetype off 
 syntax enable
-" set cursorline
-colorscheme peaksea
+" THEMING
+" THEMING
+syntax enable
+set cursorline
+set hlsearch
+set incsearch           " do incremental searching
+set showmatch           " jump to matches when entering regexp
+set ignorecase          " ignore case when searching
+set smartcase " no ignorecase if Uppercase char present
+set autoread " autoread file
+colorscheme gruvbox
 
 " =========
 " GENERAL SETTINGS
