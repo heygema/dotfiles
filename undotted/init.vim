@@ -48,11 +48,11 @@ Plug 'morhetz/gruvbox'
 "syntaxes
 " Plug 'udalov/kotlin-vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 " Plug 'pangloss/vim-javascript'
 
 " tools
@@ -222,9 +222,9 @@ if has('folding')
 endif
 
 " never trust vim with syntax enable
-if !exists("g:syntax_on")
-    syntax enable
-endif
+" if !exists("g:syntax_on")
+    " syntax enable
+" endif
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
