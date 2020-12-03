@@ -232,3 +232,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 # if [ -e /Users/Me/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/Me/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# fnm
+export PATH=/Users/Me/.fnm:$PATH
+eval "`fnm env`"
