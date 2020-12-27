@@ -30,7 +30,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'reasonml-editor/vim-reason-plus'
