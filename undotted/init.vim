@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 "syntaxes
 " Plug 'udalov/kotlin-vim'
@@ -109,7 +110,7 @@ set background=dark    " Setting dark mode
 let g:gruvbox_contrast_dark="medium"
 let g:gruvbox_italic=1
 " let g:molokai_original = 1
-colorscheme gruvbox
+colorscheme onedark
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nmap <space> za
