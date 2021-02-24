@@ -26,6 +26,8 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'mxw/vim-jsx'
 
 " tools
+" Plug 'mattn/emmet-vim'
+Plug 'pantharshit00/vim-prisma'
 Plug 'Shougo/unite.vim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'francoiscabrol/ranger.vim'
@@ -78,7 +80,7 @@ colorscheme onedark
 " inoremap <A-k> <Esc>:m .-2<CR>==gi
 " vnoremap <A-j> :m '>+1<CR>gv=gv
 " vnoremap <A-k> :m '<-2<CR>gv=gv
-
+highlight Comment cterm=italic
 
 " filetype plugin indent on
 set hlsearch
@@ -196,4 +198,4 @@ if filereadable($HOME."/.coc-vimrc")
 endif
 
 " coc-graphql
-au BufNewFile,BufRead *.prisma setfiletype graphql
+" au BufNewFile,BufRead *.prisma setfiletype graphql

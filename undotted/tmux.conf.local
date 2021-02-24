@@ -271,7 +271,8 @@ tmux_conf_copy_to_os_clipboard=false
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
-set -g default-terminal "xterm-256color" # colors!
+set -g default-terminal "xterm-256color"
+# colors!
 # set -g base-index 0           # start windows numbering at 1
 # setw -g pane-base-index 0     # make pane numbering consistent with windows
 bind -r n next-window # select previous window
@@ -301,4 +302,5 @@ set -g mouse on
 
 # move status line to top
 # set -g status-position top
+# set -g default-terminal "xterm-256color-italic"
 set-option -g default-shell /usr/local/bin/zsh
