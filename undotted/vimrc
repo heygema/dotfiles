@@ -26,7 +26,8 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'mxw/vim-jsx'
 
 " tools
-" Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
+Plug 'rescript-lang/vim-rescript'
 Plug 'pantharshit00/vim-prisma'
 Plug 'Shougo/unite.vim'
 Plug 'rhysd/git-messenger.vim'

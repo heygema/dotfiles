@@ -2,6 +2,13 @@
   "tsserver.enableJavascript": true,
   // "coc.preferences.jumpCommand": "drop",
   "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "/Users/Me/.vim/plugged/vim-rescript/rescript-vscode/extension/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
+    },
     "javascript": {
       "command": "flow",
       "args": ["lsp"],
