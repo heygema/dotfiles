@@ -112,6 +112,8 @@ source ~/.zsh_dev_vars
 # ===========
 # PATH export
 # ===========
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/goweb/go/bin"
 export PATH="$PATH:./node_modules/.bin"
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin:$PATH
@@ -164,6 +166,16 @@ function touch-safe {
     for f in "$@"; do
       [ -d $f:h ] || mkdir -p $f:h && command touch $f
     done
+}
+
+function dockerdb() {
+docker run --name app-postgres \
+             --env POSTGRES_USER=test \
+             --env POSTGRES_PASSWORD=test \
+             --publish 127.0.0.1:5432:5432 \
+             --detach \
+             --restart unless-stopped \
+             postgres:13
 }
 
 alias touch=touch-safe
