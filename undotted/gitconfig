@@ -19,5 +19,3 @@
         process = git-lfs filter-process
 [pager]
 	branch = false
-[credential]
-	helper = manager

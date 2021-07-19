@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 set -o vi
@@ -9,7 +16,7 @@ export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
 # source ~/.zsh-powerline.sh
-export ZSH="/Users/Me/.oh-my-zsh"
+export ZSH="/Users/gema/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -119,8 +126,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH="$PATH:$HOME/.flutter-cli/bin"
 # Add .NET Core SDK tools
-export PATH="$PATH:/Users/Me/.dotnet/tools"
-eval $(opam env)
+export PATH="$PATH:/Users/gema/.dotnet/tools"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='vim'
@@ -132,6 +138,14 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function arm_mode(){
+  arch arm64
+}
+
+function intel_mode(){
+  arch -x86_64 zsh
+}
 
 function workon() {
     cd $HOME/projects/$1
@@ -218,8 +232,8 @@ zle -N zle-keymap-select
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/Me/.sdkman"
-[[ -s "/Users/Me/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/Me/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/gema/.sdkman"
+[[ -s "/Users/gema/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/gema/.sdkman/bin/sdkman-init.sh"
 
 # NVM CONFIG
 # -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
@@ -242,9 +256,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export PATH=/usr/local/share/kotlin-native-macos-1.3.72/bin:$PATH
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-# if [ -e /Users/Me/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/Me/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# if [ -e /Users/gema/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gema/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # fnm
-export PATH=/Users/Me/.fnm:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/Users/gema/.fnm:$PATH
 eval "`fnm env`"
 export PATH="/usr/local/opt/libpq/bin:$PATH"

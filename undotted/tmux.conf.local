@@ -303,4 +303,4 @@ set -g mouse on
 # move status line to top
 # set -g status-position top
 # set -g default-terminal "xterm-256color-italic"
-set-option -g default-shell /usr/local/bin/zsh
+# set-option -g default-shell /bin/zsh

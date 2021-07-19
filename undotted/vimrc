@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 " appearances
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
@@ -168,6 +168,7 @@ set shortmess+=o                      " overwrite file-written messages
 set shortmess+=t                      " truncate file messages at start
 
 " regarding swap files
+set noswapfile                      " don't create root-owned files
 if exists('$SUDO_USER')
   set noswapfile                      " don't create root-owned files
 else
