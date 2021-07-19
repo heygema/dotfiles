@@ -278,6 +278,7 @@ set -g default-terminal "xterm-256color"
 bind -r n next-window # select previous window
 bind -r p previous-window     # select next window
 bind-key T swap-window -t 0
+bind-key -T copy-mode M-w send-keys -X copy-pipe 'reattach-to-user-namespace pbcopy'
 
 # increase history size
 #set -g history-limit 10000
