@@ -139,11 +139,11 @@ export PATH="$PATH:$GOPATH/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function arm_mode(){
-  arch arm64
+function arm(){
+  arch -arm64 zsh
 }
 
-function intel_mode(){
+function intel(){
   arch -x86_64 zsh
 }
 
@@ -257,9 +257,16 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 # if [ -e /Users/gema/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gema/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+
+export PATH=/opt/homebrew/bin:$PATH
+
+# homebrew m1
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # fnm
-export PATH=/opt/homebrew/bin:$PATH
 export PATH=/Users/gema/.fnm:$PATH
 eval "`fnm env`"
-export PATH="/usr/local/opt/libpq/bin:$PATH"
