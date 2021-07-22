@@ -143,7 +143,7 @@ let $FZF_DEFAULT_COMMAND='fd --type f'
 " inoremap <expr> <C-l> fzf#vim#complete#path("fd <Bar> xargs realpath --relative-to " . expand("%:h"))
 " inoremap <expr> <C-l> fzf#vim#complete#path_relative('fd')
 inoremap <expr> <C-l> JsFzfImport()
-nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
 
 " =========
 " VIM-CLAP
