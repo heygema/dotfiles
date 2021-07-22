@@ -42,8 +42,11 @@ Plug 'tpope/vim-surround'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'wakatime/vim-wakatime'
 " fzf just for relative path
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/bin/fzf'
 Plug 'chmanie/fzf.vim'
+" Plug '/usr/local/opt/fzf'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " NOTE: bclose to fix ranger-vim not being closed after used
