@@ -275,6 +275,7 @@ set -g default-terminal "xterm-256color"
 # colors!
 # set -g base-index 0           # start windows numbering at 1
 # setw -g pane-base-index 0     # make pane numbering consistent with windows
+# bind-key c new-window -c "#{pane_current_path}"
 bind -r n next-window # select previous window
 bind -r p previous-window     # select next window
 bind-key T swap-window -t 0

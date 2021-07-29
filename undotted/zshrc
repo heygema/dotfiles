@@ -139,6 +139,10 @@ export PATH="$PATH:$GOPATH/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+function encrypt() {
+  gpg -c --no-symkey-cache --cipher-algo AES256 $1
+}
+
 function arm(){
   arch -arm64 zsh
 }

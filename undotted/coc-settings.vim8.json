@@ -1,6 +1,7 @@
 {
   "tsserver.enableJavascript": true,
   // "coc.preferences.jumpCommand": "drop",
+  "coc.preferences.formatOnSaveFiletypes": ["prisma"],
   "languageserver": {
     "rescript": {
       "enable": true,
@@ -57,4 +58,3 @@
     }
   }
 }
-
