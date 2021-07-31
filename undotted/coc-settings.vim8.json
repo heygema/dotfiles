@@ -5,7 +5,7 @@
   "languageserver": {
     "rescript": {
       "enable": true,
-      "module": "/Users/Me/.vim/plugged/vim-rescript/rescript-vscode/extension/server/out/server.js",
+      "module": "~/.vim/plugged/vim-rescript/server/out/server.js",
       "args": ["--node-ipc"],
       "filetypes": ["rescript"],
       "rootPatterns": ["bsconfig.json"]
