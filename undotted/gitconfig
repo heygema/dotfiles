@@ -5,6 +5,7 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     s = status -s
     pure = pull upstream master --rebase
+    pore = pull origin master --rebase
     co = checkout
     b = branch
     recon = rebase --continue
