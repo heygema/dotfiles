@@ -5,7 +5,7 @@
 
 " =========
 " NOTE: External Dependencies
-" Ack, fd, VimPlug
+" rg, fd, VimPlug, fzf
 " =========
 
 call plug#begin('~/.vim/plugged')
