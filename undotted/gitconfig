@@ -1,6 +1,6 @@
 [user]
-	email = gem.anggada@gmail.com
-	name = Gema
+	email = 10743728+heygema@users.noreply.github.com
+	name = Gema Anggada ✌︎
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     s = status -s
