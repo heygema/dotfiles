@@ -20,3 +20,6 @@
         process = git-lfs filter-process
 [pager]
 	branch = false
+[core]
+  symlinks = true
+

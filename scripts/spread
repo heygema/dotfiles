@@ -5,7 +5,7 @@ source "$current_dir/data.sh"
 function dotfiles_destroyer() {
  # Read config files from repo
  for (( i = 0; i < ${#files[@]}; ++i )); do
-     cat "${repo_files[i]}" > "${files[i]}"
+     ln -f "${repo_files[i]}" "${files[i]}"
      echo "Writes ${repo_files[i]} to ${files[i]}"
  done
 }
