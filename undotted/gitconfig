@@ -9,6 +9,7 @@
     co = checkout
     b = branch
     recon = rebase --continue
+    cm = commit -m
     rebort = rebase --abort
     reskip = rebase --skip
     cabang = symbolic-ref --short HEAD

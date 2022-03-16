@@ -164,7 +164,7 @@ function workon() {
     cd $HOME/projects/$1
 }
 
-function dig() {
+function codeon() {
   cd $HOME/0/$1
 }
 
@@ -229,8 +229,8 @@ alias lst='ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]*\//--
 alias purge_node_modules='find . -name "node_modules" -type d  -prune -exec rm -rf "{}" \;'
 
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
+    # RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    # RPS2=$RPS1
     zle reset-prompt
 }
 
