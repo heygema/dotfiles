@@ -284,5 +284,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # fnm
-export PATH=/Users/gema/.fnm:$PATH
 eval "`fnm env`"
+export PATH=/Users/gema/.fnm:$PATH
