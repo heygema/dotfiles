@@ -286,3 +286,6 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 # fnm
 eval "`fnm env`"
 export PATH=/Users/gema/.fnm:$PATH
+
+# NOTE: where to put apps? maybe /usr/local/lib or share ?
+export PATH=/Users/gema/bin:$PATH

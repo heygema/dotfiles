@@ -65,7 +65,7 @@ if (has("termguicolors"))
 endif
 
 set cursorline
-colorscheme gruvbox
+colorscheme onedark
 " let g:gruvbox_transparent_bg = 1
 " colorscheme peaksea
 
