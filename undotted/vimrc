@@ -18,6 +18,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'haishanh/night-owl.vim'
 
 "syntaxes
 Plug 'tomlion/vim-solidity'
@@ -44,7 +45,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
 
@@ -65,7 +66,7 @@ if (has("termguicolors"))
 endif
 
 set cursorline
-colorscheme onedark
+colorscheme night-owl
 " let g:gruvbox_transparent_bg = 1
 " colorscheme peaksea
 
