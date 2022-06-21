@@ -150,7 +150,7 @@ nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : ''
 " =========
 
 " Configure to use grep
-map <silent> <Leader>g :Clap grep .<cr>
+" map <silent> <Leader>g :Clap grep .<cr>
 " map <silent> <Leader>xf :Clap files<cr>
 
 let g:git_messenger_no_default_mappings="true"
