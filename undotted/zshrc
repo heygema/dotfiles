@@ -291,3 +291,10 @@ export PATH=/Users/gema/.fnm:$PATH
 # NOTE: where to put apps? maybe /usr/local/lib or share ?
 export PATH=/Users/gema/bin:$PATH
 
+
+# bun completions
+[ -s "/Users/gema/.bun/_bun" ] && source "/Users/gema/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/gema/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
