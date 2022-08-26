@@ -214,3 +214,10 @@ let g:AutoPairsShortcutToggle = ''
 let g:user_emmet_leader_key='<C-Z>'
 
 " NETRW
+
+
+" =========
+" My custom commands
+" =========
+
+command Conflict Gvdiffsplit!

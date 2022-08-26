@@ -284,6 +284,7 @@ tmux_conf_copy_to_os_clipboard=false
 # this is the place to override or undo settings
 run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
 set -g default-terminal "xterm-256color"
+# set -g default-terminal "screen-256color"
 # colors!
 # set -g base-index 0           # start windows numbering at 1
 # setw -g pane-base-index 0     # make pane numbering consistent with windows
