@@ -17,7 +17,7 @@ cursor:
   unfocused_hollow: false
 font:
   family: JetBrains Mono
-  size: 13
+  size: 13.2
   # TODO: figure out font later
   # normal:
   # family: JetBrains Mono
