@@ -28,19 +28,23 @@ font:
   # bold_italic:
   # family: JetBrains Mono Bold Italic
   # size: 13
-shell:
-  program: /opt/homebrew/bin/tmux
-  args:
-    - new-session
-    - -A
-    - -D
-    - -s
-    - main
-  # TODO: doesn't work, find out why
-  # program: /bin/zsh
-  # args:
-  # - --login
-  # - tmux
-  # - new-session
-  # args: ["-l", "-c", "tmux attach || tmux"]
+
+# TODO: doesn't work, find out why
+# shell:
+# program: /opt/homebrew/bin/tmux
+# args:
+# - new-session
+# - -A
+# - -D
+# - -s
+# - main
+#
+#
+# TODO: doesn't work, find out why
+# program: /bin/zsh
+# args:
+# - --login
+# - tmux
+# - new-session
+# args: ["-l", "-c", "tmux attach || tmux"]
 live_config_reload: true
