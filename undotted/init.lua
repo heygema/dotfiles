@@ -68,6 +68,29 @@ vim.cmd("colorscheme onedark")
 -- Custom KeyMaps --
 -- ================================ --
 
+local keymap = function(tbl)
+	-- Some sane default options
+	local opts = { noremap = true, silent = true }
+	-- Dont want these named fields on the options table
+	local mode = tbl['mode']
+	tbl['mode'] = nil
+	local bufnr = tbl['bufnr']
+	tbl['bufnr'] = nil
+
+	for k, v in pairs(tbl) do
+		if tonumber(k) == nil then
+			opts[k] = v
+		end
+	end
+
+
+	if bufnr ~= nil then
+		vim.api.nvim_buf_set_keymap(bufnr, mode, tbl[1], tbl[2], opts)
+	else
+		vim.api.nvim_set_keymap(mode, tbl[1], tbl[2], opts)
+	end
+end
+
 local nmap = function(tbl)
 	tbl['mode'] = 'n'
 	keymap(tbl)
@@ -87,8 +110,11 @@ end
 --    vim.api.nvim_command("Rg")
 -- end
 
--- nmap {"<leader>b", ":enew<CR>"}
+nmap {"<leader>b", ":enew<CR>"}
+-- nmap("<leader>b", ":enew<CR>")
 --
--- vim.keymap.set('n', '<leader>g', vim.api.nvim_command("Rg"))
-vim.keymap.set('n', '<leader>g', vim.cmd("Rg"))
+--
+vim.keymap.set('n', '<leader>k', ":let @/=\"\"<CR>", {silent=true})
+vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
+vim.keymap.set('n', '<leader>f', ":GFiles<CR>", {silent = true})
 vim.keymap.set('n', '<leader>c', function() print("real lua function") end)

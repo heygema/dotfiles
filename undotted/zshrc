@@ -215,6 +215,8 @@ alias touch=touch-safe
 # alias v='~/.nvim-pre/bin/nvim'
 # alias vf='v -o `fzf`'
 
+alias python='python3'
+alias pip='pip3'
 alias v='nvim'
 alias vf='nvim -o `fzf`'
 

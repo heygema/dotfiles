@@ -1,0 +1,19 @@
+startup_mode: Maximized
+opcaity: 0.2
+
+window:
+  dimensions:
+    columns: 200
+    lines: 150
+font:
+  family: JetBrains Mono
+  size: 13
+  # normal:
+    # family: JetBrains Mono
+  # bold:
+    # family: JetBrains Mono Bold
+  # italic:
+    # family: JetBrains Mono Italic
+  # bold_italic:
+    # family: JetBrains Mono Bold Italic
+  # size: 13
