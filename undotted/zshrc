@@ -145,6 +145,8 @@ export PATH="$PATH:$GOPATH/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias rtfi="npm install three @types/three @react-three/fiber @react-three/drei @react-three/postprocessing"
+
 function wthr() {
   curl wttr.in/$1
 }

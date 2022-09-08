@@ -54,6 +54,7 @@ vim.o.clipboard = "unnamedplus"
 local use = require('packer').use
 
 require('packer').startup(function()
+  use {'glepnir/dashboard-nvim'}
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use { 'junegunn/fzf', run = ":call fzf#install()" }
@@ -111,10 +112,29 @@ end
 -- end
 
 nmap {"<leader>b", ":enew<CR>"}
--- nmap("<leader>b", ":enew<CR>")
---
---
+nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
+nmap {"<c-l>", ":Files<CR>"}
+nmap {"<leader>f", ":Files<CR>"}
+
+-- nmap {}
+
+-- vim.keymap.set('n', 'C-l', "", {silent=true})
+
+-- vim.keymap.set('n', '<C-l>', ":Files<CR>", {silent = true})
+
 vim.keymap.set('n', '<leader>k', ":let @/=\"\"<CR>", {silent=true})
 vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
-vim.keymap.set('n', '<leader>f', ":GFiles<CR>", {silent = true})
 vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
+
+-- ================================ --
+-- FUNCTIONS --
+-- ================================ --
+--
+
+--local JsFzfImport = function()
+ --   print("Henlo!")
+--end
+
+-- imap {"<c-l>", JsFzfImport()}
+vim.keymap.set('i', '<c-l>', function() print("real lua function") end)
+
