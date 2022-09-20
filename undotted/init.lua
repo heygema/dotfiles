@@ -2,29 +2,6 @@
 -- WELCOME TO MY NVIM CONFIG --
 -- ================================ --
 
--- just sample
--- o.termguicolors = true
--- o.syntax = 'on'
--- o.errorbells = false
--- o.smartcase = true
--- o.showmode = false
--- bo.swapfile = false
--- o.backup = false
--- o.undodir = vim.fn.stdpath('config') .. '/undodir'
--- o.undofile = true
--- o.incsearch = true
--- o.hidden = true
--- o.completeopt='menuone,noinsert,noselect'
--- bo.autoindent = true
--- bo.smartindent = true
--- o.tabstop = 2
--- o.softtabstop = 2
--- o.shiftwidth = 2
--- o.expandtab = true
--- wo.number = true
--- wo.relativenumber = true
--- wo.signcolumn = 'yes'
--- wo.wrap = false
 
 vim.o.termguicolors = false
 vim.wo.number = true
@@ -61,6 +38,8 @@ require('packer').startup(function()
   use { 'junegunn/fzf.vim' }
   use 'itchyny/lightline.vim'
   use 'joshdick/onedark.vim'
+  use 'preservim/nerdtree'
+
 end)
 
 vim.cmd("colorscheme onedark")
@@ -127,7 +106,7 @@ vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
 vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
 
 -- ================================ --
--- FUNCTIONS --
+-- CUSTOM FUNCTIONS --
 -- ================================ --
 --
 
@@ -138,3 +117,12 @@ vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
 -- imap {"<c-l>", JsFzfImport()}
 vim.keymap.set('i', '<c-l>', function() print("real lua function") end)
 
+
+-- ================================ --
+-- PLUGIN CONFIGS --
+-- ================================ --
+
+nmap {"<leader>n", ":NERDTreeFocus<CR>"}
+nmap {"<C-n>", ":NERDTree<CR>"}
+nmap {"<C-t>", ":NERDTreeToggle<CR>"}
+nmap {"<C-f>", ":NERDTreeFind<CR>"}

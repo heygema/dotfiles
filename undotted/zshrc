@@ -302,3 +302,8 @@ export PATH=/Users/gema/bin:$PATH
 # Bun
 export BUN_INSTALL="/Users/gema/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/gema/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

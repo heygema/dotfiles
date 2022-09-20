@@ -28,6 +28,8 @@ font:
   # bold_italic:
   # family: JetBrains Mono Bold Italic
   # size: 13
+import:
+  - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
 
 # TODO: doesn't work, find out why
 # shell:
