@@ -19,6 +19,7 @@ Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'haishanh/night-owl.vim'
+Plug 'catppuccin/vim', {'as': 'catppuccin'}
 
 "syntaxes
 Plug 'tomlion/vim-solidity'
@@ -67,6 +68,14 @@ endif
 
 set cursorline
 colorscheme gruvbox
+
+" let g:catppuccin_flavour = "macchiato"
+" latte, frappe, macchiato, mocha
+" let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+
+" colorscheme "catppuccin"
+
+
 " let g:gruvbox_transparent_bg = 1
 
 " =========

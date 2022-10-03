@@ -29,7 +29,8 @@ font:
   # family: JetBrains Mono Bold Italic
   # size: 13
 import:
-  - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+  # - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 
 # TODO: doesn't work, find out why
 # shell:

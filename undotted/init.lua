@@ -3,7 +3,8 @@
 -- ================================ --
 
 
-vim.o.termguicolors = false
+vim.opt.termguicolors = false
+-- vim.opt.termguicolors = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.ma = true
@@ -14,6 +15,7 @@ vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.o.autoread = true
+vim.o.autoindent = true
 vim.o.nu = true 
 vim.o.foldlevelstart = 99
 vim.o.scrolloff = 7
@@ -23,6 +25,8 @@ vim.o.swapfile = false
 -- use y and p with the system clipboard
 vim.o.clipboard = "unnamedplus"
 -- vim.g.mapleader = "\\"
+
+-- vim.cmd [[command!  ]]
 
 
 -- ================================ --
@@ -36,13 +40,17 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
-  use 'itchyny/lightline.vim'
+--  use 'itchyny/lightline.vim'
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+
   use 'joshdick/onedark.vim'
   use 'preservim/nerdtree'
+  use 'kyazdani42/nvim-web-devicons'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'tpope/vim-fugitive'
 
 end)
-
-vim.cmd("colorscheme onedark")
 
 -- ================================ --
 -- Custom KeyMaps --
@@ -90,10 +98,16 @@ end
 --    vim.api.nvim_command("Rg")
 -- end
 
+
 nmap {"<leader>b", ":enew<CR>"}
 nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
 nmap {"<c-l>", ":Files<CR>"}
-nmap {"<leader>f", ":Files<CR>"}
+nmap {"<leader>f", ":Rg<CR>"}
+
+-- buffer config
+nmap {"gj", ":bnext<CR>"}
+nmap {"gk", ":bprev<CR>"}
+nmap {"gq", ":bd<CR>"}
 
 -- nmap {}
 
@@ -126,3 +140,16 @@ nmap {"<leader>n", ":NERDTreeFocus<CR>"}
 nmap {"<C-n>", ":NERDTree<CR>"}
 nmap {"<C-t>", ":NERDTreeToggle<CR>"}
 nmap {"<C-f>", ":NERDTreeFind<CR>"}
+
+-- ================================ --
+-- Theme
+-- ================================ --
+
+require("catppuccin").setup()
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+vim.cmd("colorscheme catppuccin")
+
+vim.g.airline_theme='tomorrow'
+vim.g['airline#extensions#tabline#enabled'] = 1
+-- you can do it like this too
+-- vim.cmd [[colorscheme catppuccin]]
