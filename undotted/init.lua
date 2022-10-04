@@ -2,7 +2,6 @@
 -- WELCOME TO MY NVIM CONFIG --
 -- ================================ --
 
-
 vim.opt.termguicolors = false
 -- vim.opt.termguicolors = true
 vim.wo.number = true
@@ -25,31 +24,36 @@ vim.o.swapfile = false
 -- use y and p with the system clipboard
 vim.o.clipboard = "unnamedplus"
 -- vim.g.mapleader = "\\"
-
 -- vim.cmd [[command!  ]]
-
-
 -- ================================ --
 -- PLUGINS --
 -- ================================ --
 local use = require('packer').use
-
 require('packer').startup(function()
   use {'glepnir/dashboard-nvim'}
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
---  use 'itchyny/lightline.vim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-
   use 'joshdick/onedark.vim'
   use 'preservim/nerdtree'
   use 'kyazdani42/nvim-web-devicons'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'tpope/vim-fugitive'
+  use 'scrooloose/nerdcommenter'
+  use 'jiangmiao/auto-pairs'
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 
+  -- language deps
+  use 'tomlion/vim-solidity'
+  use 'leafgarland/typescript-vim'
+  use 'peitalin/vim-jsx-typescript'
+  use 'jparise/vim-graphql'
+  use 'neovimhaskell/haskell-vim'
+  use 'mxw/vim-jsx'
 end)
 
 -- ================================ --
@@ -93,62 +97,45 @@ local example_func = function(a, b)
       print("A is: ", a)
       print("B is: ", b)
 end
-
 -- function fuck()
 --    vim.api.nvim_command("Rg")
 -- end
-
-
 nmap {"<leader>b", ":enew<CR>"}
 nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
 nmap {"<c-l>", ":Files<CR>"}
 nmap {"<leader>f", ":Rg<CR>"}
-
 -- buffer config
-nmap {"gj", ":bnext<CR>"}
-nmap {"gk", ":bprev<CR>"}
+nmap {"gj", ":bprev<CR>"}
+nmap {"gk", ":bnext<CR>"}
 nmap {"gq", ":bd<CR>"}
-
 -- nmap {}
-
 -- vim.keymap.set('n', 'C-l', "", {silent=true})
-
 -- vim.keymap.set('n', '<C-l>', ":Files<CR>", {silent = true})
-
 vim.keymap.set('n', '<leader>k', ":let @/=\"\"<CR>", {silent=true})
 vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
 vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
-
 -- ================================ --
 -- CUSTOM FUNCTIONS --
 -- ================================ --
 --
-
 --local JsFzfImport = function()
  --   print("Henlo!")
 --end
-
 -- imap {"<c-l>", JsFzfImport()}
 vim.keymap.set('i', '<c-l>', function() print("real lua function") end)
-
-
 -- ================================ --
 -- PLUGIN CONFIGS --
 -- ================================ --
-
 nmap {"<leader>n", ":NERDTreeFocus<CR>"}
 nmap {"<C-n>", ":NERDTree<CR>"}
 nmap {"<C-t>", ":NERDTreeToggle<CR>"}
 nmap {"<C-f>", ":NERDTreeFind<CR>"}
-
 -- ================================ --
 -- Theme
 -- ================================ --
-
 require("catppuccin").setup()
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 vim.cmd("colorscheme catppuccin")
-
 vim.g.airline_theme='tomorrow'
 vim.g['airline#extensions#tabline#enabled'] = 1
 -- you can do it like this too
