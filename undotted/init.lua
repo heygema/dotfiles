@@ -2,29 +2,7 @@
 -- WELCOME TO MY NVIM CONFIG --
 -- ================================ --
 
-vim.opt.termguicolors = false
--- vim.opt.termguicolors = true
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.o.ma = true
-vim.o.mouse = a
-vim.o.cursorline = true
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.softtabstop = 4
-vim.o.expandtab = true
-vim.o.autoread = true
-vim.o.autoindent = true
-vim.o.nu = true 
-vim.o.foldlevelstart = 99
-vim.o.scrolloff = 7
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.swapfile = false
--- use y and p with the system clipboard
-vim.o.clipboard = "unnamedplus"
--- vim.g.mapleader = "\\"
--- vim.cmd [[command!  ]]
+require('basic')
 -- ================================ --
 -- PLUGINS --
 -- ================================ --
@@ -46,6 +24,8 @@ require('packer').startup(function()
   use 'jiangmiao/auto-pairs'
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
+  use 'ms-jpq/coq_nvim'
+  use {'nvim-treesitter/nvim-treesitter'}
 
   -- language deps
   use 'tomlion/vim-solidity'
@@ -55,81 +35,11 @@ require('packer').startup(function()
   use 'neovimhaskell/haskell-vim'
   use 'mxw/vim-jsx'
 end)
-
 -- ================================ --
 -- Custom KeyMaps --
 -- ================================ --
+require('keymaps')
 
-local keymap = function(tbl)
-	-- Some sane default options
-	local opts = { noremap = true, silent = true }
-	-- Dont want these named fields on the options table
-	local mode = tbl['mode']
-	tbl['mode'] = nil
-	local bufnr = tbl['bufnr']
-	tbl['bufnr'] = nil
-
-	for k, v in pairs(tbl) do
-		if tonumber(k) == nil then
-			opts[k] = v
-		end
-	end
-
-
-	if bufnr ~= nil then
-		vim.api.nvim_buf_set_keymap(bufnr, mode, tbl[1], tbl[2], opts)
-	else
-		vim.api.nvim_set_keymap(mode, tbl[1], tbl[2], opts)
-	end
-end
-
-local nmap = function(tbl)
-	tbl['mode'] = 'n'
-	keymap(tbl)
-end
-
-local imap = function(tbl)
-	tbl['mode'] = 'i'
-	keymap(tbl)
-end
-
-local example_func = function(a, b)
-      print("A is: ", a)
-      print("B is: ", b)
-end
--- function fuck()
---    vim.api.nvim_command("Rg")
--- end
-nmap {"<leader>b", ":enew<CR>"}
-nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
-nmap {"<c-l>", ":Files<CR>"}
-nmap {"<leader>f", ":Rg<CR>"}
--- buffer config
-nmap {"gj", ":bprev<CR>"}
-nmap {"gk", ":bnext<CR>"}
-nmap {"gq", ":bd<CR>"}
--- nmap {}
--- vim.keymap.set('n', 'C-l', "", {silent=true})
--- vim.keymap.set('n', '<C-l>', ":Files<CR>", {silent = true})
-vim.keymap.set('n', '<leader>k', ":let @/=\"\"<CR>", {silent=true})
-vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
-vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
--- ================================ --
--- CUSTOM FUNCTIONS --
--- ================================ --
---
---local JsFzfImport = function()
- --   print("Henlo!")
---end
--- imap {"<c-l>", JsFzfImport()}
-vim.keymap.set('i', '<c-l>', function() print("real lua function") end)
--- ================================ --
--- PLUGIN CONFIGS --
--- ================================ --
-nmap {"<leader>n", ":NERDTreeFocus<CR>"}
-nmap {"<C-n>", ":NERDTree<CR>"}
-nmap {"<C-t>", ":NERDTreeToggle<CR>"}
-nmap {"<C-f>", ":NERDTreeFind<CR>"}
 -- ================================ --
 -- Theme
 -- ================================ --
@@ -143,6 +53,8 @@ vim.g['airline#extensions#tabline#enabled'] = 1
 -- ================================ --
 -- LSP
 -- ================================ --
+
+-- all lsp keymap etc
 vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
 
@@ -159,7 +71,6 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -170,9 +81,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  vim.keymap.set('n', '<space>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, bufopts)
+  vim.keymap.set('n', '<space>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, bufopts)
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
@@ -184,14 +93,20 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+
+local lsp = require "lspconfig"
+local coq = require "coq"
+
 --require('lspconfig')['pyright'].setup{
     --on_attach = on_attach,
     --flags = lsp_flags,
 --}
 --
 require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
+    coq.lsp_ensure_capabilities{
+      on_attach = on_attach,
+      flags = lsp_flags,
+    }
 }
 
 require('lspconfig')['rust_analyzer'].setup{
@@ -203,3 +118,22 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
+
+-- prettier
+--
+local null_ls = require("null-ls")
+
+null_ls.setup({
+  on_attach = function(client, bufnr)
+    if client.server_capabilities.documentFormattingProvider then
+      vim.cmd("nnoremap <silent><buffer> <Leader>[ :lua vim.lsp.buf.formatting()<CR>")
+
+      -- format on save
+      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
+    end
+
+    if client.server_capabilities.documentRangeFormattingProvider then
+      vim.cmd("xnoremap <silent><buffer> <Leader>[ :lua vim.lsp.buf.range_formatting({})<CR>")
+    end
+  end,
+})
