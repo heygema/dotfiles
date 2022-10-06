@@ -1,3 +1,6 @@
+-- ================================ --
+-- Custom KeyMaps --
+-- ================================ --
 local keymap = function(tbl)
 	-- Some sane default options
 	local opts = { noremap = true, silent = true }
