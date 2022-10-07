@@ -13,6 +13,6 @@ yarn spread
 
 __Update Remote Repo__
 ```
-yarn update-remote-repo
+yarn update:remote
 ```
 
