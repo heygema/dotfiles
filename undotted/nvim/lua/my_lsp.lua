@@ -39,7 +39,6 @@ local lsp_flags = {
 }
 
 local nvim_lsp = require "lspconfig"
-local coq = require "coq"
 local servers = { 'tsserver', 'rust_analyzer' }
 
 -- Add additional capabilities supported by nvim-cmp
@@ -48,11 +47,9 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup{
-    --coq.lsp_ensure_capabilities{
       on_attach = on_attach,
       flags = lsp_flags,
       capabilities = capabilities,
-    --}
   }
 end
 
