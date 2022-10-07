@@ -12,7 +12,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   client.resolved_capabilities.document_formatting = false
   -- vim.keymap.set("n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
@@ -42,11 +42,16 @@ local nvim_lsp = require "lspconfig"
 local coq = require "coq"
 local servers = { 'tsserver', 'rust_analyzer' }
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup{
     --coq.lsp_ensure_capabilities{
       on_attach = on_attach,
       flags = lsp_flags,
+      capabilities = capabilities,
     --}
   }
 end
@@ -77,3 +82,50 @@ prettier.setup({
       config_precedence = "prefer-file", -- or "cli-override" or "file-override"
   },
 })
+
+
+--- NVIM-CMP
+
+-- luasnip setup
+local luasnip = require 'luasnip'
+
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+}
