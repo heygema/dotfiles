@@ -67,7 +67,7 @@ null_ls.setup({
     if client.server_capabilities.documentFormattingProvider then
       vim.cmd("nnoremap <silent><buffer> <Leader>[ :lua vim.lsp.buf.formatting()<CR>")
       -- format on save
-      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.format({ async = true})")
+      --vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.format({ async = true})")
     end
 
     if client.server_capabilities.documentRangeFormattingProvider then
@@ -77,6 +77,21 @@ null_ls.setup({
 })
 
 prettier.setup({
+  bin = 'prettier', -- or `'prettierd'` (v0.22+)
+  filetypes = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+  },
   cli_options = {
       -- https://prettier.io/docs/en/cli.html#--config-precedence
       config_precedence = "prefer-file", -- or "cli-override" or "file-override"
