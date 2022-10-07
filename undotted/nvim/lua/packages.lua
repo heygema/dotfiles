@@ -19,7 +19,6 @@ require('packer').startup(function()
   use 'jiangmiao/auto-pairs'
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
-  use 'ms-jpq/coq_nvim'
   use {'nvim-treesitter/nvim-treesitter'}
   use "nvim-lua/plenary.nvim"
 
