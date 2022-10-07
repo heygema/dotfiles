@@ -2,7 +2,12 @@
 current_dir="$(dirname "$0")"
 source "$current_dir/data.sh"
 
+# CONFIG="$current_dir/../configs"
+
+# copy coc configs
+# cp -R "$HOME/.config/coc" "$CONFIG/"
+
 for (( i = 0; i < ${#files[@]}; ++i )); do
-    cat "${files[i]}" > "${repo_files[i]}"
+    ln -f "${files[i]}" "${repo_files[i]}"
     echo "Writes ${files[i]} to ${repo_files[i]}"
 done

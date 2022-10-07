@@ -99,21 +99,58 @@ nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " =========
 " FZF
 " =========
+" Function based on unmerged PR from here https://github.com/junegunn/fzf.vim/pull/628
+function! s:generate_relative_js(path)
+  let target = getcwd() . '/' . (join(a:path))
+  let base = expand('%:p:h')
+
+  let prefix = ""
+  while stridx(target, base) != 0
+    let base = substitute(system('dirname ' . base), '\n\+$', '', '')
+    let prefix = '../' . prefix
+  endwhile
+
+  if prefix == ''
+    let prefix = './'
+  endif
+
+  let relative = prefix . substitute(target, base . '/', '', '')
+
+  let withJsTrunc = substitute(relative, '\.[tj]sx\=$', "", "")
+
+  return withJsTrunc
+
+endfunction
+
+function! JsFzfImport()
+  return fzf#vim#complete#path(
+        \ "fd",
+        \ fzf#wrap({ 'reducer': function('s:generate_relative_js')})
+        \ )
+endfunction
+
+" inoremap <expr> <c-x><c-h> JsFzfImport()
+
 
 " nmap <C-f> :GFiles<cr>
 " nmap <C-f> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
 
 " ignore what's in gitignore
 let $FZF_DEFAULT_COMMAND='fd --type f'
-inoremap <expr> <C-l> fzf#vim#complete#path_relative('fd')
-nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+" inoremap <expr> <C-l> <plug>(fzf-complete-path)
+" inoremap <expr> <C-l> fzf#vim#complete#path('fd')
+
+" inoremap <expr> <C-l> fzf#vim#complete#path("fd <Bar> xargs realpath --relative-to " . expand("%:h"))
+" inoremap <expr> <C-l> fzf#vim#complete#path_relative('fd')
+inoremap <expr> <C-l> JsFzfImport()
+nnoremap <silent> <expr> <C-l> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
 
 " =========
 " VIM-CLAP
 " =========
 
 " Configure to use grep
-map <silent> <Leader>g :Clap grep .<cr>
+" map <silent> <Leader>g :Clap grep .<cr>
 " map <silent> <Leader>xf :Clap files<cr>
 
 let g:git_messenger_no_default_mappings="true"
@@ -177,3 +214,10 @@ let g:AutoPairsShortcutToggle = ''
 let g:user_emmet_leader_key='<C-Z>'
 
 " NETRW
+
+
+" =========
+" My custom commands
+" =========
+
+command Conflict Gvdiffsplit!

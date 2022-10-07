@@ -5,7 +5,7 @@
 
 " =========
 " NOTE: External Dependencies
-" Ack, fd, VimPlug
+" rg, fd, VimPlug, fzf
 " =========
 
 call plug#begin('~/.vim/plugged')
@@ -13,11 +13,13 @@ call plug#begin('~/.vim/plugged')
 " appearances
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'haishanh/night-owl.vim'
+Plug 'catppuccin/vim', {'as': 'catppuccin'}
 
 "syntaxes
 Plug 'tomlion/vim-solidity'
@@ -41,17 +43,16 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'wakatime/vim-wakatime'
-" fzf just for relative path
-Plug '/usr/local/opt/fzf'
-Plug 'chmanie/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " NOTE: bclose to fix ranger-vim not being closed after used
 Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
-source ~/.vimextend.vim
+source ~/.extend.vim
 
 set nocompatible
 set nocp                    " 'compatible' is not set
@@ -66,9 +67,16 @@ if (has("termguicolors"))
 endif
 
 set cursorline
-colorscheme onedark
+colorscheme gruvbox
+
+" let g:catppuccin_flavour = "macchiato"
+" latte, frappe, macchiato, mocha
+" let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+
+" colorscheme "catppuccin"
+
+
 " let g:gruvbox_transparent_bg = 1
-" colorscheme peaksea
 
 " =========
 " GENERAL SETTINGS
@@ -168,6 +176,7 @@ set shortmess+=o                      " overwrite file-written messages
 set shortmess+=t                      " truncate file messages at start
 
 " regarding swap files
+set noswapfile                      " don't create root-owned files
 if exists('$SUDO_USER')
   set noswapfile                      " don't create root-owned files
 else

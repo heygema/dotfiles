@@ -1,13 +1,15 @@
 [user]
-	email = gem.anggada@gmail.com
-	name = Gema
+	email = 10743728+heygema@users.noreply.github.com
+	name = Gema Anggada ✌︎
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     s = status -s
     pure = pull upstream master --rebase
+    pore = pull origin master --rebase
     co = checkout
     b = branch
     recon = rebase --continue
+    cm = commit -m
     rebort = rebase --abort
     reskip = rebase --skip
     cabang = symbolic-ref --short HEAD
@@ -19,5 +21,6 @@
         process = git-lfs filter-process
 [pager]
 	branch = false
-[credential]
-	helper = manager
+[core]
+  symlinks = true
+
