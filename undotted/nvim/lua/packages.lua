@@ -8,6 +8,8 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
+-- try telescope sometimes
+-- use 'nvim-telescope/telescope.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'joshdick/onedark.vim'
@@ -21,7 +23,7 @@ require('packer').startup(function()
   use('MunifTanjim/prettier.nvim')
   use {'nvim-treesitter/nvim-treesitter'}
   use "nvim-lua/plenary.nvim"
-  use 'folke/lsp-colors.nvim'
+  --use 'folke/lsp-colors.nvim'
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
 
