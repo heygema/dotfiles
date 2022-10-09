@@ -120,3 +120,8 @@ inoremap <expr> <C-l> JsFzfImport()
 
 ]]
 
+
+-- ranger
+
+vim.g.ranger_map_keys = 0
+nmap {"<leader>r", ":Ranger<CR>"}

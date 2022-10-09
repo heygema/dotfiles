@@ -21,6 +21,9 @@ require('packer').startup(function()
   use('MunifTanjim/prettier.nvim')
   use {'nvim-treesitter/nvim-treesitter'}
   use "nvim-lua/plenary.nvim"
+  use 'folke/lsp-colors.nvim'
+  use 'rbgrouleff/bclose.vim'
+  use 'francoiscabrol/ranger.vim'
 
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
