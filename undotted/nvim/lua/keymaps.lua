@@ -81,10 +81,9 @@ vim.keymap.set('i', '<c-l>', function() print("real lua function") end)
 -- PLUGIN CONFIGS --
 -- ================================ --
 nmap {"<leader>n", ":NERDTreeFocus<CR>"}
-nmap {"<C-n>", ":NERDTree<CR>"}
-nmap {"<C-t>", ":NERDTreeToggle<CR>"}
+--nmap {"<C-n>", ":NERDTree<CR>"}
 nmap {"<leader>t", ":NERDTreeToggle<CR>"}
-nmap {"<C-f>", ":NERDTreeFind<CR>"}
+--nmap {"<C-f>", ":NERDTreeFind<CR>"}
 
 -- legacy settings to import relative path
 vim.cmd [[
