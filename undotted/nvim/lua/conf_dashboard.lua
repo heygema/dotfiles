@@ -2,6 +2,7 @@ local home = os.getenv('HOME')
 local db = require('dashboard')
 
 db.custom_header = { 
+   '           DEADSEC™          ',
    ' ███████████████████████████ ',
    ' ███████▀▀▀░░░░░░░▀▀▀███████ ',
    ' ████▀░░░░░░░░░░░░░░░░░▀████ ',
@@ -21,6 +22,8 @@ db.custom_header = {
    ' ███████▄░░░░░░░░░░░▄███████ ',
    ' ██████████▄▄▄▄▄▄▄██████████ ',
 }
+
+db.custom_footer = { "© neovim" }
 
   -- macos
   --db.preview_command = 'cat | lolcat -F 0.3'
