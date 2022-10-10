@@ -1,9 +1,10 @@
 vim.opt.termguicolors = false
 -- vim.opt.termguicolors = true
+vim.g.mapleader = " "
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.ls = 1
-vim.o.ch = 0
+vim.o.ch = 1
 vim.o.ma = true
 vim.o.mouse = a
 vim.o.cursorline = true

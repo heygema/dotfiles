@@ -8,8 +8,8 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
--- try telescope sometimes
--- use 'nvim-telescope/telescope.nvim'
+  --try telescope sometimes
+  --use 'nvim-telescope/telescope.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'joshdick/onedark.vim'

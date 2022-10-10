@@ -5,6 +5,7 @@ UNDOTTED="./undotted"
 files=(
 "$HOME/.vimrc"
 "$HOME/.extend.vim"
+"$HOME/.config/nvim/static/neovim.cat"
 "$HOME/.config/nvim/init.lua"
 "$HOME/.config/nvim/lua/basic.lua"
 "$HOME/.config/nvim/lua/conf_dashboard.lua"
@@ -24,6 +25,7 @@ files=(
 repo_files=(
 "$UNDOTTED/vimrc"
 "$UNDOTTED/extend.vim"
+"$UNDOTTED/nvim/static/neovim.cat"
 "$UNDOTTED/init.lua"
 "$UNDOTTED/nvim/lua/basic.lua"
 "$UNDOTTED/nvim/lua/conf_dashboard.lua"

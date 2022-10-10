@@ -53,11 +53,24 @@ end
 --nnoremap <silent> <Leader>h: :History:<CR>
 --nnoremap <silent> <Leader>h/ :History/<CR> 
 
+-- searching, finder, etc
+-- trying telescope 
+
+--local builtin = require('telescope.builtin')
+
+--vim.keymap.set('n', '<c-l>', builtin.find_files, {})
+--vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+--vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
+--vim.keymap.set('n', '<leader>b', builtin.buffers, {})
+--vim.keymap.set('n', '<leader>h', builtin.help_tags, {})
+--vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
+-- fzf
 nmap {"<leader>b", ":Buffers<CR>"}
-nmap {"gb", ":enew<CR>"}
-nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
 nmap {"<c-l>", ":Files<CR>"}
 nmap {"<leader>f", ":Rg<CR>"}
+-- END searching
+nmap {"gb", ":enew<CR>"}
+nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}
 -- buffer config
 nmap {"gj", ":bprev<CR>"}
 nmap {"gk", ":bnext<CR>"}
@@ -66,7 +79,6 @@ nmap {"gq", ":bd<CR>"}
 -- vim.keymap.set('n', 'C-l', "", {silent=true})
 -- vim.keymap.set('n', '<C-l>', ":Files<CR>", {silent = true})
 vim.keymap.set('n', '<leader>k', ":let @/=\"\"<CR>", {silent=true})
-vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
 vim.keymap.set('n', '<leader>c', function() print("real lua function") end)
 -- ================================ --
 -- CUSTOM FUNCTIONS --
