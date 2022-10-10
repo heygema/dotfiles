@@ -65,9 +65,10 @@ end
 --vim.keymap.set('n', '<leader>h', builtin.help_tags, {})
 --vim.keymap.set('n', '<leader>g', ":Rg<CR>", {silent = true})
 -- fzf
-nmap {"<leader>b", ":Buffers<CR>"}
 nmap {"<c-l>", ":Files<CR>"}
-nmap {"<leader>f", ":Rg<CR>"}
+nmap {"<leader>f", ":Files<CR>"}
+nmap {"<leader>b", ":Buffers<CR>"}
+nmap {"<leader>g", ":Rg<CR>"}
 -- END searching
 nmap {"gb", ":enew<CR>"}
 nmap {"<leader>e", ":e ~/0/dotfiles/undotted/init.lua<CR>"}

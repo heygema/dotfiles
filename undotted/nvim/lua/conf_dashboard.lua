@@ -12,20 +12,20 @@
   db.custom_center = {
       {icon = '∆  ',
       desc = 'Recently latest session                  ',
-      shortcut = '-',
+      shortcut = 'NONE',
       action ='SessionLoad'},
-      {icon = 'ƒ  ',
-      desc = 'Recently opened files                   ',
-      action =  'DashboardFindHistory',
-      shortcut = '-'},
+      --{icon = 'ƒ  ',
+      --desc = 'Recently opened files                   ',
+      --action =  'DashboardFindHistory',
+      --shortcut = '-'},
       {icon = 'ø  ',
       desc = 'Find  File                              ',
       action = ':Files',
-      shortcut = '-'},
+      shortcut = 'SPC f'},
       {icon = '∑  ',
       desc = 'Find  word                              ',
       action = 'Rg',
-      shortcut = '-'},
+      shortcut = 'SPC g'},
     }
 
 db.custom_header = { 
@@ -48,4 +48,3 @@ db.custom_header = {
    ' ███████▄░░░░░░░░░░░▄███████ ',
    ' ██████████▄▄▄▄▄▄▄██████████ ',
 }
-
