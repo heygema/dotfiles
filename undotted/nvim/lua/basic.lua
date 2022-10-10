@@ -3,8 +3,8 @@ vim.opt.termguicolors = false
 --vim.g.mapleader = " "
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.o.ls = 1
-vim.o.ch = 1
+--vim.o.ls = 1
+--vim.o.ch = 1
 vim.o.ma = true
 vim.o.mouse = a
 vim.o.cursorline = true
@@ -24,3 +24,8 @@ vim.o.swapfile = false
 vim.o.clipboard = "unnamedplus"
 -- vim.g.mapleader = "\\"
 -- vim.cmd [[command!  ]]
+--
+--vim.o.smartcase = true
+
+vim.cmd [[ set ignorecase ]]
+vim.cmd [[ set smartcase ]]

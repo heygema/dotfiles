@@ -43,9 +43,9 @@ db.custom_header = {
       {icon = 'ø  ',
       desc = 'Find  File                              ',
       action = ':Files',
-      shortcut = 'SPC f'},
+      shortcut = '\\ f'},
       {icon = '∑  ',
       desc = 'Find  word                              ',
       action = 'Rg',
-      shortcut = 'SPC g'},
+      shortcut = '\\ g'},
     }
