@@ -26,6 +26,7 @@ require('packer').startup(function()
   --use 'folke/lsp-colors.nvim'
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
+  use 'natecraddock/sessions.nvim'
 
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
