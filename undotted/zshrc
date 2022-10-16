@@ -224,6 +224,7 @@ alias vf='nvim -o `fzf`'
 
 bindkey -v
 alias nv='nvim'
+alias nvf='nvim -o `fzf`'
 alias nvimf='nvim -o `fzf`'
 alias vimf='vim -o `fzf`'
 alias cfd='cd $(dirname `fzf`)'
@@ -307,3 +308,18 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PNPM_HOME="/Users/gema/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/gema/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gema/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gema/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gema/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
