@@ -27,6 +27,8 @@ require('packer').startup(function()
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
   use 'natecraddock/sessions.nvim'
+  use 'yavko/minimap.nvim'
+
 
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -34,6 +36,7 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   -- language deps
+  use 'evanleck/vim-svelte'
   use 'tomlion/vim-solidity'
   use 'leafgarland/typescript-vim'
   use 'peitalin/vim-jsx-typescript'

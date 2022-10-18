@@ -26,7 +26,7 @@ vim.o.clipboard = "unnamedplus"
 -- vim.cmd [[command!  ]]
 --
 --vim.o.smartcase = true
-
+--
 -- fucking legacy vimscript from old vimrc
 vim.cmd [[ set foldenable ]]
 vim.cmd [[ set ignorecase ]]
