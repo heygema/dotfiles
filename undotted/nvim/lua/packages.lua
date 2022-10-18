@@ -27,7 +27,7 @@ require('packer').startup(function()
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
   use 'natecraddock/sessions.nvim'
-  use 'yavko/minimap.nvim'
+  --use 'yavko/minimap.nvim'
 
 
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
