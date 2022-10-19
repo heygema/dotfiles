@@ -2,7 +2,7 @@ local home = os.getenv('HOME')
 local db = require('dashboard')
 
 db.custom_header = { 
-   '           DEADSEC™          ',
+   '           DEDSEC™           ',
    ' ███████████████████████████ ',
    ' ███████▀▀▀░░░░░░░▀▀▀███████ ',
    ' ████▀░░░░░░░░░░░░░░░░░▀████ ',
