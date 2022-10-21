@@ -2,6 +2,7 @@ env:
   TERM: xterm-256color
 
 #startup_mode: Maximized
+startup_mode: Windowed
 opcaity: 0.2
 
 window:
