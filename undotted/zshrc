@@ -213,6 +213,8 @@ docker run --name app-postgres \
 
 alias touch=touch-safe
 
+alias packageJsonUpgrade='pnpm outdated | awk 'NR>1 {print $1"@"$4}' | xargs pnpm install'
+
 # FOR PRE-RELEASE NVIM
 # alias v='~/.nvim-pre/bin/nvim'
 # alias vf='v -o `fzf`'
