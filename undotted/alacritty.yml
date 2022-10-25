@@ -17,7 +17,8 @@ cursor:
     blinking: On
   unfocused_hollow: false
 font:
-  family: JetBrainsMono NF
+  #family: JetBrainsMono NF
+  family: JetBrains Mono
   size: 14
   # TODO: figure out font later
   # normal:
