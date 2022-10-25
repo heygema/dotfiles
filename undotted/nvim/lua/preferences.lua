@@ -14,7 +14,7 @@ vim.g['airline#extensions#tabline#enabled'] = 1
 --vim.g.minimap_auto_start = 1
 --vim.g.minimap_auto_start_win_enter = 1
 
+-- for nerd font
 --vim.cmd [[ set guifont=JetBrainsMono\ Nerd\ Font:h20 ]]
+--
 --vim.cmd [[ let g:airline_powerline_fonts = 1 ]]
---vim.cmd [[]]
---vim.cmd [[]]

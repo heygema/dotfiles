@@ -3,16 +3,16 @@
 
 __Import current machine dotfiles settings__
 ```
-yarn update
+pnpm update
 ```
 
 __Distribute dotfiles in repo__
 ```
-yarn spread
+pnpm spread
 ```
 
 __Update Remote Repo__
 ```
-yarn update:remote
+pnpm update:remote
 ```
 
