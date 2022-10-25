@@ -14,7 +14,7 @@ require('packer').startup(function()
   use 'vim-airline/vim-airline-themes'
   --use 'joshdick/onedark.vim'
   use 'preservim/nerdtree'
-  --use 'ryanoasis/vim-devicons'
+  use 'ryanoasis/vim-devicons'
 
   --use 'kyazdani42/nvim-web-devicons'
   use { "catppuccin/nvim", as = "catppuccin" }
