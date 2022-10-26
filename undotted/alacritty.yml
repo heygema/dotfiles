@@ -41,8 +41,11 @@ font:
   # family: JetBrains Mono Bold Italic
   # size: 13
 import:
-  # - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+   #- ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+   #- ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+   #- ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+   #- ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
 # TODO: doesn't work, find out why
 # shell:
