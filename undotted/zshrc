@@ -23,7 +23,7 @@ export ZSH="/Users/gema/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # theme list: agnoster, spaceship
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -322,3 +322,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+source ~/powerlevel10k/powerlevel10k.zsh-theme

@@ -42,6 +42,8 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   -- language deps
+  
+  use 'preservim/vim-markdown'
   use 'evanleck/vim-svelte'
   use 'tomlion/vim-solidity'
   use 'leafgarland/typescript-vim'
