@@ -6,6 +6,10 @@ require('packer').startup(function()
   use {'glepnir/dashboard-nvim'}
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  use 'tpope/vim-obsession'
+  --use 'ibhagwan/fzf-lua'
+  -- optional for icon support
+    --requires = { 'kyazdani42/nvim-web-devicons' }
   use { 'junegunn/fzf', run = ":call fzf#install()" }
   use { 'junegunn/fzf.vim' }
   --try telescope sometimes

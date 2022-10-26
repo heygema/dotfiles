@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "practice": "try 1 try 2 try 3 try 4",
     "update": "./scripts/update",
     "spread": "./scripts/spread",
     "logchanges": "./scripts/logchanges",
