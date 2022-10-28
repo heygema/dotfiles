@@ -18,3 +18,4 @@ vim.g['airline#extensions#tabline#enabled'] = 1
 --vim.cmd [[ set guifont=JetBrainsMono\ Nerd\ Font:h20 ]]
 --
 vim.cmd [[ let g:airline_powerline_fonts = 1 ]]
+vim.cmd [[ let g:WebDevIconsUnicodeDecorateFolderNodes=1 ]]
