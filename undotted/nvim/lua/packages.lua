@@ -1,6 +1,7 @@
 -- ================================ --
 -- PLUGINS --
 -- ================================ --
+-- 
 local use = require('packer').use
 require('packer').startup(function()
   use {'glepnir/dashboard-nvim'}
