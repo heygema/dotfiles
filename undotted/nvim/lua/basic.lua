@@ -1,6 +1,7 @@
 vim.opt.termguicolors = false
 -- vim.opt.termguicolors = true
 --vim.g.mapleader = " "
+--vim.o.tw = 81
 vim.wo.number = true
 vim.wo.relativenumber = true
 --vim.o.ls = 1
