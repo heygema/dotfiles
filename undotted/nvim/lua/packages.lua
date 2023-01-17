@@ -8,6 +8,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'tpope/vim-obsession'
+  use 'github/copilot.vim'
   --use 'ibhagwan/fzf-lua'
   -- optional for icon support
     --requires = { 'kyazdani42/nvim-web-devicons' }
