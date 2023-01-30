@@ -147,4 +147,11 @@ cmp.setup {
   --Information = "#0db9d7",
   --Hint = "#10B981"
 --})
+--
+--
+
+vim.cmd [[ 
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+]]
 
