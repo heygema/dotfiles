@@ -1,10 +1,10 @@
 -- ================================ --
 -- WELCOME TO MY NVIM CONFIG --
 -- ================================ --
-require('basic')
+require('v.basic')
 --require('conf_dashboard')
-require('packages')
-require('keymaps')
-require('preferences')
-require('my_lsp')
+require('v.packages')
+require('v.keymaps')
+require('v.preferences')
+require('v.my_lsp')
 
