@@ -4,7 +4,11 @@
 -- 
 local use = require('packer').use
 require('packer').startup(function()
-  use {'glepnir/dashboard-nvim'}
+  --use {'glepnir/dashboard-nvim'}
+  use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  }
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'tpope/vim-obsession'
