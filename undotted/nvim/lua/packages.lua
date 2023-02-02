@@ -9,13 +9,14 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'tpope/vim-obsession'
   use 'github/copilot.vim'
+  use 'olimorris/onedarkpro.nvim'
   --use 'ibhagwan/fzf-lua'
   -- optional for icon support
     --requires = { 'kyazdani42/nvim-web-devicons' }
-  use { 'junegunn/fzf', run = ":call fzf#install()" }
-  use { 'junegunn/fzf.vim' }
+  --use { 'junegunn/fzf', run = ":call fzf#install()" }
+  --use { 'junegunn/fzf.vim' }
   --try telescope sometimes
-  --use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   --use 'joshdick/onedark.vim'
