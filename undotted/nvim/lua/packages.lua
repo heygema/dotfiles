@@ -17,8 +17,8 @@ require('packer').startup(function()
   --use 'ibhagwan/fzf-lua'
   -- optional for icon support
     --requires = { 'kyazdani42/nvim-web-devicons' }
-  --use { 'junegunn/fzf', run = ":call fzf#install()" }
-  --use { 'junegunn/fzf.vim' }
+  use { 'junegunn/fzf', run = ":call fzf#install()" }
+  use { 'junegunn/fzf.vim' }
   --try telescope sometimes
   use 'nvim-telescope/telescope.nvim'
   use 'vim-airline/vim-airline'

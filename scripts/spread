@@ -4,10 +4,15 @@ source "$current_dir/data.sh"
 
 function dotfiles_destroyer() {
  # Read config files from repo
- for (( i = 0; i < ${#files[@]}; ++i )); do
-     ln -f "${repo_files[i]}" "${files[i]}"
-     echo "Writes ${repo_files[i]} to ${files[i]}"
- done
+ #for (( i = 0; i < ${#files[@]}; ++i )); do
+     #ln -f "${repo_files[i]}" "${files[i]}"
+     #echo "Writes ${repo_files[i]} to ${files[i]}"
+ #done
+for config in "${!configs[@]}"; do
+  #machine_source="${configs[$config][0]}"
+  ln -f "${configs[0]}" "${configs[1]}"
+  echo "Writes ${repo_files[i]} to ${files[i]}"
+done
 }
 
 function really_sure() {
