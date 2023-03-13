@@ -12,6 +12,8 @@ set -o vi
 bindkey -v
 export KEYTIMEOUT=1
 
+export OPENAI_KEY="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"
+
 # turn off tmux
 # if [ "$TMUX" = "" ]; then tmux; fi
 
@@ -211,14 +213,26 @@ docker run --name app-postgres \
              postgres:13
 }
 
+function daily200() {
+    git checkout "daily2.0.0" && \
+    git reset --hard "origin/versions/2.0.0" && \
+    git commit --allow-empty -m $1 && \
+    git push origin "daily2.0.0" -f
+}
+
+function daily210() {
+    git checkout "daily2.1.0" && \
+    git reset --hard "origin/versions/2.1.0" && \
+    git commit --allow-empty -m $1 && \
+    #git push origin "daily2.1.0" -f
+}
+
 alias touch=touch-safe
 
 # FOR PRE-RELEASE NVIM
 # alias v='~/.nvim-pre/bin/nvim'
 # alias vf='v -o `fzf`'
 
-alias python='python3'
-alias pip='pip3'
 alias v='nvim'
 alias vf='nvim -o `fzf`'
 
@@ -339,5 +353,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 eval "$(starship init zsh)"

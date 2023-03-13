@@ -12,7 +12,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'tpope/vim-obsession'
-  use 'github/copilot.vim'
+  --use 'github/copilot.vim'
   use 'olimorris/onedarkpro.nvim'
   --use 'ibhagwan/fzf-lua'
   -- optional for icon support
