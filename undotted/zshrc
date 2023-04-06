@@ -234,6 +234,9 @@ alias touch=touch-safe
 alias v='nvim'
 alias vf='nvim -o `fzf`'
 
+alias vim='nvim'
+alias vimf='nvim -o `fzf`'
+
 bindkey -v
 alias nv='nvim'
 alias nvf='nvim -o `fzf`'
@@ -353,3 +356,5 @@ unset __conda_setup
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 eval "$(starship init zsh)"
+
+test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
