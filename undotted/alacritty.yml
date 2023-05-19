@@ -6,9 +6,9 @@ startup_mode: Windowed
 opacity: 0.2
 
 window:
-  dimensions:
-    columns: 200
-    lines: 150
+  # dimensions:
+    # columns: 200
+    # lines: 150
   history: 1000
   multiplier: 3
 cursor:
