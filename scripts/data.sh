@@ -61,9 +61,9 @@ repo_files=(
 #
 #
 
-declare -a configs=(
-  ("$HOME/.vimrc" "$UNDOTTED/vimrc")
-)
+# declare -a configs=(
+#   ("$HOME/.vimrc" "$UNDOTTED/vimrc")
+# )
 
 # way 2 
 #declare -A configs

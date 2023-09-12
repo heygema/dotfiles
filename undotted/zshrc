@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -11,6 +13,9 @@ source "$HOME/.secure.sh"
 set -o vi
 bindkey -v
 export KEYTIMEOUT=1
+
+export OPENAI_KEY="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"
+export OPENAI_API_KEY="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"
 
 # turn off tmux
 # if [ "$TMUX" = "" ]; then tmux; fi
@@ -226,6 +231,7 @@ function daily210() {
 }
 
 alias touch=touch-safe
+alias kubectl="minikube kubectl --"
 
 # FOR PRE-RELEASE NVIM
 # alias v='~/.nvim-pre/bin/nvim'
@@ -239,6 +245,7 @@ alias vimf='nvim -o `fzf`'
 
 bindkey -v
 alias nv='nvim'
+alias cr='cursor'
 alias nvf='nvim -o `fzf`'
 alias nvimf='nvim -o `fzf`'
 alias vimf='vim -o `fzf`'
@@ -355,6 +362,13 @@ unset __conda_setup
 # <<< conda initialize <<<
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+export YARN_IGNORE_NODE=1
 eval "$(starship init zsh)"
 
+
 test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
