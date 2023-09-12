@@ -14,9 +14,6 @@ set -o vi
 bindkey -v
 export KEYTIMEOUT=1
 
-export OPENAI_KEY="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"
-export OPENAI_API_KEY="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"
-
 # turn off tmux
 # if [ "$TMUX" = "" ]; then tmux; fi
 
