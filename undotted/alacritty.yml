@@ -160,7 +160,7 @@ schemes:
       cyan: "#2AA298"
       white: "#F0F0F0"
 
-colors: *night-owl
+# colors: *night-owl
 
 # TODO: doesn't work, find out why
 # shell:
