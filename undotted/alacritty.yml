@@ -19,15 +19,17 @@ cursor:
 font:
   #family: JetBrainsMono NF
   #family: JetBrainsMono Nerd Font
-  size: 14
+  size: 15
   normal:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font Mono
     style: Regular
+    # family: JetBrainsMono Nerd Font
+    # style: Regular
   bold:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font Mono
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font Mono
     style: Italic
 
   # TODO: figure out font later
@@ -41,10 +43,10 @@ font:
   # family: JetBrains Mono Bold Italic
   # size: 13
 import:
-   #- ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+   # - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
    - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-   #- ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
-   #- ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+   # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+   # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
    #- ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
 schemes:
