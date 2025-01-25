@@ -8,6 +8,7 @@
 #if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source "$HOME/.secure.sh"
 # If you come from bash you might have to change your $PATH.
@@ -389,4 +390,6 @@ export PATH="/Users/gema/.codeium/windsurf/bin:$PATH"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/gema/.dart-cli-completion/zsh-config.zsh ]] && . /Users/gema/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+#
+
 
