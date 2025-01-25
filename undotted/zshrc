@@ -1,7 +1,7 @@
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/gema/.zsh/completions:"* ]]; then export FPATH="/Users/gema/.zsh/completions:$FPATH"; fi
+# if [[ ":$FPATH:" != *":/Users/gema/.zsh/completions:"* ]]; then export FPATH="/Users/gema/.zsh/completions:$FPATH"; fi
 # CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+# [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -21,13 +21,13 @@ export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
 # source ~/.zsh-powerline.sh
-export ZSH="/Users/gema/.oh-my-zsh"
+# export ZSH="/Users/gema/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # theme list: agnoster, spaceship
-#ZSH_THEME="mortalscumbag"
+# ZSH_THEME="mortalscumbag"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -86,7 +86,7 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -115,12 +115,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ws="windsurf"
 
 # allow locally installed npm binaries to be executed;
 # added by `npm i -g add-local-binaries-to-path`
-
 source ~/.zsh_dev_vars
-
 # ===========
 # PATH export
 # ===========
@@ -136,11 +135,9 @@ export PATH="$PATH:/Users/gema/.dotnet/tools"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='nvim'
-
 # solana
 # export PATH="/Users/gema/solana"/bin:"$PATH"
 export PATH="/Users/gema/0/tools/solana"/bin:"$PATH"
-
 # ===========
 # GOPATH 
 # ===========
@@ -151,7 +148,7 @@ export PATH="$PATH:$GOPATH/bin"
 
 alias rtfi="npm install three @types/three @react-three/fiber @react-three/drei @react-three/postprocessing"
 
-function wthr() {
+function weather() {
   curl wttr.in/$1
 }
 
@@ -159,11 +156,11 @@ function encrypt() {
   gpg -c --no-symkey-cache --cipher-algo AES256 $1
 }
 
-function arm(){
+function arm_mode(){
   arch -arm64 zsh
 }
 
-function intel(){
+function intel_mode(){
   arch -x86_64 zsh
 }
 
@@ -360,7 +357,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
-export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+# export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 export YARN_IGNORE_NODE=1
 eval "$(starship init zsh)"
 
@@ -387,3 +384,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Added by Windsurf
 export PATH="/Users/gema/.codeium/windsurf/bin:$PATH"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/gema/.dart-cli-completion/zsh-config.zsh ]] && . /Users/gema/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
