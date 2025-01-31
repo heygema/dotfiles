@@ -393,3 +393,6 @@ export PATH="/Users/gema/.codeium/windsurf/bin:$PATH"
 #
 
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/gema/.lmstudio/bin"
