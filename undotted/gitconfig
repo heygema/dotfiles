@@ -1,6 +1,9 @@
-[user]
-	email = 10743728+heygema@users.noreply.github.com
-	name = Gema Anggada ✌︎
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     s = status -s
@@ -14,18 +17,25 @@
     reskip = rebase --skip
     cabang = symbolic-ref --short HEAD
     monyet = diff upstream/master HEAD
+
 [filter "lfs"]
         required = true
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
         process = git-lfs filter-process
+
 [pager]
 	branch = false
+
 [core]
   symlinks = true
 
+[user]
+	name = Gema
+	email = 10743728+heygema@users.noreply.github.com
+
 [credential]
 	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
