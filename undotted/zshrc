@@ -10,7 +10,7 @@ if [[ ":$FPATH:" != *":/Users/Me/.zsh/completions:"* ]]; then export FPATH="/Use
 #if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source "$HOME/.secure.sh"
 # If you come from bash you might have to change your $PATH.
@@ -141,7 +141,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export EDITOR='nvim'
 # solana
 # export PATH="/Users/gema/solana"/bin:"$PATH"
-export PATH="/Users/gema/0/tools/solana"/bin:"$PATH"
+# export PATH="/Users/gema/0/tools/solana"/bin:"$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 # ===========
 # GOPATH 
 # ===========
@@ -432,3 +433,10 @@ export PATH=/Users/Me/.opencode/bin:$PATH
 export PATH="$PATH:/Users/Me/.lmstudio/bin"
 # End of LM Studio CLI section
 
+alias pip='pip3'
+
+# kimi-code
+export PATH="/Users/Me/.kimi-code/bin:$PATH"
+
+# mimocode
+export PATH=/Users/Me/.mimocode/bin:$PATH
